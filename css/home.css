@@ -1,0 +1,98 @@
+*{
+      font-family: 'Times New Roman', Times, serif;
+}
+
+
+.bannerLogo{
+      background: url(/Green_mount/img/banner.jpeg) no-repeat;
+      background-size: cover;
+      height: 88vh;
+}
+.bannerLogo h1{
+      margin: 0;
+      font-weight: 600;
+      font-size: 1.8rem;
+      transform: scaleY(1.2);
+}
+.bannerLogo p{
+      font-family: Helvetica, Arial, sans-serif;
+      font-weight: 500;
+      font-size: 18px;
+}
+.bannerLogo img{
+      width:70px;
+}
+
+
+.ourMission h1{
+      font-size: 60px;
+      font-weight: 100;
+      color: rgb(7, 60, 7);
+}
+.ourMission p{
+      font-size: 20px;
+      letter-spacing: 1.5px;
+      line-height: 35px;
+      word-spacing: 4px;
+}
+
+
+.Slider1{
+      height: 87vh;
+      overflow: hidden;
+}
+
+
+.facilities h1{
+      font-size: 60px;
+      font-weight: 100;
+      color:rgb(121, 9, 9);
+}
+.facilities h2{
+      font-size: 40px;
+      font-weight: 100;
+      letter-spacing: 1px;
+}
+.facilities p{
+      font-size: 18px;
+      font-weight: 100;
+      letter-spacing: 1px;
+      word-spacing: 5px;
+      line-height: 30px;
+      text-align: justify;
+}
+
+
+.eventPhotos{
+      background-color: #39627c;
+}
+
+.eventBox{
+      overflow: hidden;
+}
+.eventPhotos img{
+      transform: scale(1.5);
+      transition: all 1s ease;
+
+}
+.eventBox:hover img{
+      transform: scale(1);
+}
+.eventBox h5,.eventBox p{
+      background-color: rgba(0, 0, 0, 0.199);
+}
+
+
+.aboutUs h1{
+      font-size: 60px;
+      font-weight: 100;
+      color:rgb(91, 120, 10);
+}
+.aboutUs p{
+      font-size: 18px;
+      font-weight: 100;
+      letter-spacing: 1px;
+      word-spacing: 5px;
+      line-height: 30px;
+}
+

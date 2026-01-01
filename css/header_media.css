@@ -1,0 +1,37 @@
+@media only screen and (min-width:200px) and (max-width:575px){
+      .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
+            justify-content:start;
+      }
+      .navLogo h2{
+            font-size: 20px;
+      }
+      .navLogo p{
+            font-size: 10px;
+      }
+      .navLogo {
+            margin: 0;
+      }
+      .navbar-toggler {
+            position: fixed;
+            top: 14px;
+            right: 8px;
+      }
+      footer p{
+            font-size: 14px;
+      }
+}
+
+
+@media only screen and (min-width:575px) and (max-width:1199px){
+      .navLogo h2{
+            font-size: 28px;
+      }
+      .navLogo p{
+            font-size: 14px;
+      }
+}
+
+
+@media (min-width: 1400px) {
+
+}

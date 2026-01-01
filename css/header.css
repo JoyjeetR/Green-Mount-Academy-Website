@@ -1,0 +1,29 @@
+header{
+      z-index: 100;
+}
+
+.navLogo img{
+      width: 70px;
+}
+.navLogo h2{
+      font-size: 32px;
+      font-weight: 500;
+      margin-bottom: 0;
+}
+.navLogo p{
+      font-size: 16px;
+      font-weight: 400;
+}
+
+.navButn a{
+      font-size: 22px;
+}
+
+
+footer{
+      background-color: rgb(0, 128, 68);
+      align-items: center;
+}
+footer p{
+      font-size: 24px;
+}

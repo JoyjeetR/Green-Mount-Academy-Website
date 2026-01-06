@@ -1,6 +1,7 @@
-@media only screen and (min-width:200px) and (max-width:575px){
+/* adjusting font sizes as per the required for the screens for all texts */
 
-      
+/* Additional changes of mobile screen to fit all content smoothly */
+@media only screen and (min-width:200px) and (max-width:575px){
       .branchCard h1{
             font-size: 28px;
             font-weight: 500;
@@ -26,7 +27,7 @@
       }
 }
 
-
+/* Additional changes of tabs (sm> and <lg) screen to fit all content smoothly */
 @media only screen and (min-width:575px) and (max-width:1199px){
 
       

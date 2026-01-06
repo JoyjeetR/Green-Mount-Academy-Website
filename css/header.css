@@ -1,5 +1,10 @@
+*{
+      font-family: 'Times New Roman', Times, serif;
+}
+
 header{
       z-index: 100;
+      background-color:  rgba(72, 159, 99, 0.947) !important;
 }
 
 .navLogo img{

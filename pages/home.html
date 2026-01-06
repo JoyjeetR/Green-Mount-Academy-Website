@@ -18,8 +18,10 @@
 
 <body>
       <header class="position-sticky top-0">
-            <nav class="navbar navbar-expand-lg py-2" style="background-color:#419674">
+            <!-- This is a collapsable header is collapse in sm and low screens -->
+            <nav class="navbar navbar-expand-lg py-2" >
                   <div class="container-fluid  px-4">
+                        <!-- This is the logo pic and the name of school -->
                         <a class="navbar-brand navLogo d-flex align-items-center " href="/Green_mount/pages/home.html">
                               <div class="row">
                                     <div class="col-2">
@@ -31,14 +33,16 @@
                                     </div>
                               </div>
                         </a>
+                        <!-- Toggle button for the collapsed links -->
                         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                               data-bs-target="#right_nav" aria-controls="offcanvasScrolling">
                               <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse navButn justify-content-end">
+                              <!-- links for the nto collapsed screen -->
                               <div class="navbar-nav">
                                     <a class="nav-link px-4  active" aria-current="page" href="/Green_mount/pages/home.html">Home</a>
-                                    <a class="nav-link px-4 " href="#">Gallery</a>
+                                    <a class="nav-link px-4 " href="/Green_mount/pages/gallery.html">Gallery</a>
                                     <a class="nav-link px-4 " href="/Green_mount/pages/branches.html">Branches</a>
                                     <a class="nav-link px-4 " href="#">Facilities</a>
                                     <a class="nav-link px-4 " href="#">Contact</a>
@@ -46,6 +50,7 @@
                         </div>
                   </div>
             </nav>
+            <!-- The collapsed menu for the header comes out from the right -->
             <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
                   id="right_nav">
                   <div class="offcanvas-header navLogo " style="background-color:#79d199">
@@ -64,7 +69,7 @@
                         <div class="navbar-nav">
                               <a class="nav-link px-4  active" aria-current="page"
                                     href="/Green_mount/pages/home.html">Home</a>
-                              <a class="nav-link px-4 " href="#">Gallery</a>
+                              <a class="nav-link px-4 " href="/Green_mount/pages/gallery.html">Gallery</a>
                               <a class="nav-link px-4 " href="/Green_mount/pages/branches.html">Branches</a>
                               <a class="nav-link px-4 " href="#">Facilities</a>
                               <a class="nav-link px-4 " href="#">Contact</a>
@@ -73,6 +78,7 @@
             </div>
       </header>
       <main>
+            <!-- Logo inside the main photo -->
             <section class=" container-fluid p-4 bannerLogo">
                   <div class="row text-center ">
                         <div class="col-12">
@@ -82,6 +88,7 @@
                         </div>
                   </div>
             </section>
+            <!-- This is mission section it has three partition for lg> screens, two partition for sm> -->
             <section class=" container-fluid py-sm-5 mt-sm-5 py-3 mt-2 ourMission">
                   <div class="container">
                         <div class="row">
@@ -90,6 +97,7 @@
                                     <hr>
                               </div>
                         </div>
+                        <!-- creating partition as per the screen using bootstrap -->
                         <div class="row g-sm-5 gy-3">
                               <div class="col-sm-4 col-12 ">
                                     <p>Our mission is to provide quality education that helps every student grow
@@ -125,8 +133,10 @@
                         </div>
                   </div>
             </section>
+            <!-- Picture slider with navigation button for each picture -->
             <section class="container-fluid  py-sm-5 py-3 px-0">
                   <div id="slider1" class="carousel slide Slider1">
+                        <!-- Navigation button for each Picture -->
                         <div class="carousel-indicators">
                               <button type="button" data-bs-target="#slider1" data-bs-slide-to="0" class="active"
                                     aria-current="true" aria-label="Slide 1"></button>
@@ -141,6 +151,7 @@
                               <button type="button" data-bs-target="#slider1" data-bs-slide-to="5"
                                     aria-label="Slide 3"></button>
                         </div>
+                        <!-- Pictures for the slider -->
                         <div class="carousel-inner">
                               <div class="carousel-item active">
                                     <img src="/Green_mount/img/slide1Pic1.webp" class="d-block w-100" alt="...">
@@ -162,6 +173,7 @@
                               </div>
 
                         </div>
+                        <!-- Forward and previous button for the slider -->
                         <button class="carousel-control-prev" type="button" data-bs-target="#slider1"
                               data-bs-slide="prev">
                               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -174,6 +186,7 @@
                         </button>
                   </div>
             </section>
+            <!-- Facilities section divided into two partition  for sm> screens-->
             <section class="container-fluid facilities py-sm-5 py-3">
                   <div class="container">
 
@@ -183,6 +196,7 @@
                                     <hr>
                               </div>
                         </div>
+                        <!-- creating partition as per the screen using bootstrap -->
                         <div class="row py-3">
                               <div class="col-sm-6 col-12 px-4">
                                     <h2>Hostel Facilities</h2>
@@ -216,7 +230,10 @@
                         </div>
                   </div>
             </section>
+            <!-- event photo section divided into 4 partition for lg> screens, 2 partition for sm> screens -->
             <section class="container-fluid eventPhotos p-sm-5 py-3">
+                  <!-- creating partition for each screen using bootstrap -->
+                  <!-- photos have a hover effect externally without bootstrap -->
                   <div class="row gx-5 gy-4">
                         <div class="col-lg-3 col-sm-6 col-12">
                               <div class="card text-bg-dark   eventBox">
@@ -268,6 +285,7 @@
                         </div>
                   </div>
             </section>
+            <!-- About section  -->
             <section class="container-fluid aboutUs py-sm-5 py-3 ">
                   <div class="container">
                         <div class="row">
@@ -299,6 +317,7 @@
             </section>
       </main>
       <footer>
+            <!-- footer  -->
             <section class="container-fluid footer p-4">
                   <div class="container text-center">
                         <p class="m-0">&copy;Green Mount Academy | All Rights Reversed</p>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+      <link rel="stylesheet" href="/Green_mount/css/gallery.css">
+      <link rel="stylesheet" href="/Green_mount/css/gallery_media.css">
+      <link rel="stylesheet" href="/Green_mount/css/header.css">
+      <link rel="stylesheet" href="/Green_mount/css/header_media.css">
+</head>
+
+<body>
+      <header class="position-sticky top-0">
+            <!-- This is a collapsable header is collapse in sm and low screens -->
+            <nav class="navbar navbar-expand-lg py-2">
+                  <div class="container-fluid  px-4">
+                        <!-- This is the logo pic and the name of school -->
+                        <a class="navbar-brand navLogo d-flex align-items-center " href="/Green_mount/pages/home.html">
+                              <div class="row">
+                                    <div class="col-2">
+                                          <img src="/Green_mount/img/gmaLogo.webp" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="col-10">
+                                          <h2>+2 Green Mount Academy</h2>
+                                          <p class="m-0">An english medium school CBSE Curriculum, New Delhi</p>
+                                    </div>
+                              </div>
+                        </a>
+                        <!-- Toggle button for the collapsed links -->
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                              data-bs-target="#right_nav" aria-controls="offcanvasScrolling">
+                              <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse navButn justify-content-end">
+                              <!-- links for the nto collapsed screen -->
+                              <div class="navbar-nav">
+                                    <a class="nav-link px-4  active" aria-current="page"
+                                          href="/Green_mount/pages/home.html">Home</a>
+                                    <a class="nav-link px-4 " href="#">Gallery</a>
+                                    <a class="nav-link px-4 " href="/Green_mount/pages/branches.html">Branches</a>
+                                    <a class="nav-link px-4 " href="#">Facilities</a>
+                                    <a class="nav-link px-4 " href="#">Contact</a>
+                              </div>
+                        </div>
+                  </div>
+            </nav>
+            <!-- The collapsed menu for the header comes out from the right -->
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                  id="right_nav">
+                  <div class="offcanvas-header navLogo " style="background-color:#79d199">
+                        <div class="row">
+                              <div class="col-2">
+                                    <img src="/Green_mount/img/gmaLogo.webp" alt="" class="img-fluid">
+                              </div>
+                              <div class="col-10">
+                                    <h2>+2 Green Mount Academy</h2>
+                                    <p class="m-0">An english medium school CBSE Curriculum, New Delhi</p>
+                              </div>
+                        </div>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body">
+                        <div class="navbar-nav">
+                              <a class="nav-link px-4  active" aria-current="page"
+                                    href="/Green_mount/pages/home.html">Home</a>
+                              <a class="nav-link px-4 " href="#">Gallery</a>
+                              <a class="nav-link px-4 " href="/Green_mount/pages/branches.html">Branches</a>
+                              <a class="nav-link px-4 " href="#">Facilities</a>
+                              <a class="nav-link px-4 " href="#">Contact</a>
+                        </div>
+                  </div>
+            </div>
+      </header>
+      <main>
+            <button type="button" class="btn btn-outline-light nav_image " data-bs-toggle="offcanvas"
+                  data-bs-target="#staticBackdrop" aria-controls="staticBackdrop"><span class="navbar-toggler-icon"></span></button>
+
+                  
+            <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop"
+                  aria-labelledby="staticBackdropLabel">
+                  <div class="offcanvas-header pb-0">
+                        <h5 class="offcanvas-title px-3" id="staticBackdropLabel">Select Image Section</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+                  <hr>
+                  <div class="offcanvas-body py-0">
+                        <ul class="list-group list-group-flush">
+                              <li class="list-group-item"><a class="nav-link" href="#campus">School Campus</a></li>
+                              <li class="list-group-item"><a class="nav-link" href="#classroom">Classrooms</a></li>
+                              <li class="list-group-item"><a class="nav-link" href="#playground">Playgrounds</a></li>
+                              <li class="list-group-item"><a class="nav-link" href="#campus">School Campus</a></li>
+                              <li class="list-group-item"><a class="nav-link" href="#campus">School Campus</a></li>
+                        </ul>
+                  </div>
+            </div>
+
+
+            <section class=" container-fluid main_container position-relative">
+                  <div class="container p-lg-5 p-sm-4 p-2">
+                        <div class="row py-3 " id="campus">
+                              <div class="col-12">
+                                    <h1 class="text-white pb-0 ">School Campus</h1>
+                                    <hr class=" m-0 text-white">
+                              </div>
+                        </div>
+                        <div class="row g-lg-5 g-sm-4 g-3 image_conatiner justify-content-center align-items-center">
+                              <div class="col-lg-4 col-sm-6 col-12 ">
+                                    <img src="https://picsum.photos/id/237/400/450" alt="" class="img-fluid">
+                              </div>
+                              <div class="col-lg-4 col-sm-6 col-12 ">
+                                    <img src="https://picsum.photos/id/238/400/450" alt="" class="img-fluid">
+                              </div>
+                              <div class="col-lg-4 col-sm-6 col-12 ">
+                                    <img src="https://picsum.photos/id/239/400/450" alt="" class="img-fluid">
+                              </div>
+                              <div class="col-lg-4 col-sm-6 col-12 ">
+                                    <img src="https://picsum.photos/id/240/400/450" alt="" class="img-fluid">
+                              </div>
+                              <div class="col-lg-4 col-sm-6 col-12 ">
+                                    <img src="https://picsum.photos/id/241/400/450" alt="" class="img-fluid">
+                              </div>
+                              <div class="col-lg-4 col-sm-6 col-12 ">
+                                    <img src="https://picsum.photos/id/242/400/450" alt="" class="img-fluid">
+                              </div>
+                        </div>
+
+                        <div class="row py-3 mt-5" id="classroom">
+                              <div class="col-12">
+                                    <h1 class="text-white py-0">Classrooms</h1>
+                                    <hr class=" m-0 text-white">
+                              </div>
+                        </div>
+                        <div class="row g-lg-5 g-sm-4 g-3 image_conatiner justify-content-center align-items-center">
+                              <div class="col-lg-4 col-sm-6 col-12 ">
+                                    <img src="https://picsum.photos/id/243/400/450" alt="" class="img-fluid">
+                              </div>
+                              <div class="col-lg-4 col-sm-6 col-12 ">
+                                    <img src="https://picsum.photos/id/244/400/450" alt="" class="img-fluid">
+                              </div>
+                              <div class="col-lg-4 col-sm-6 col-12 ">
+                                    <img src="https://picsum.photos/id/245/400/450" alt="" class="img-fluid">
+                              </div>
+                              <div class="col-lg-4 col-sm-6 col-12 ">
+                                    <img src="https://picsum.photos/id/246/400/450" alt="" class="img-fluid">
+                              </div>
+                              <div class="col-lg-4 col-sm-6 col-12 ">
+                                    <img src="https://picsum.photos/id/247/400/450" alt="" class="img-fluid">
+                              </div>
+                        </div>
+
+                        <div class="row py-3 mt-5" id="playground">
+                              <div class="col-12">
+                                    <h1 class="text-white py-0">Playgrounds</h1>
+                                    <hr class=" m-0 text-white">
+                              </div>
+                        </div>
+                        <div class="row g-lg-5 g-sm-4 g-3 image_conatiner justify-content-center align-items-center">
+                              <div class="col-lg-4 col-sm-6 col-12 ">
+                                    <img src="https://picsum.photos/id/248/400/450" alt="" class="img-fluid">
+                              </div>
+                              <div class="col-lg-4 col-sm-6 col-12 ">
+                                    <img src="https://picsum.photos/id/249/400/450" alt="" class="img-fluid">
+                              </div>
+                              <div class="col-lg-4 col-sm-6 col-12 ">
+                                    <img src="https://picsum.photos/id/250/400/450" alt="" class="img-fluid">
+                              </div>
+                              <div class="col-lg-4 col-sm-6 col-12 ">
+                                    <img src="https://picsum.photos/id/251/400/450" alt="" class="img-fluid">
+                              </div>
+                              <div class="col-lg-4 col-sm-6 col-12 ">
+                                    <img src="https://picsum.photos/id/252/400/450" alt="" class="img-fluid">
+                              </div>
+                        </div>
+                  </div>
+            </section>
+      </main>
+      <footer>
+            <!-- footer  -->
+            <section class="container-fluid footer p-4">
+                  <div class="container text-center">
+                        <p class="m-0">&copy;Green Mount Academy | All Rights Reversed</p>
+                  </div>
+            </section>
+      </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"></script>
+
+</html>

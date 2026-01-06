@@ -4,6 +4,7 @@
 
 
 .bannerLogo{
+      /* setting background image for the first banner of school */
       background: url(/Green_mount/img/banner.jpeg) no-repeat;
       background-size: cover;
       height: 88vh;
@@ -23,7 +24,7 @@
       width:70px;
 }
 
-
+/* font sizing for mission section */
 .ourMission h1{
       font-size: 60px;
       font-weight: 100;
@@ -43,6 +44,7 @@
 }
 
 
+/* font sizing for facilities section */
 .facilities h1{
       font-size: 60px;
       font-weight: 100;
@@ -66,14 +68,13 @@
 .eventPhotos{
       background-color: #39627c;
 }
-
 .eventBox{
       overflow: hidden;
 }
+/* Hover effect for the event pictures on hover it scales to 1 form 1.5 */
 .eventPhotos img{
       transform: scale(1.5);
       transition: all 1s ease;
-
 }
 .eventBox:hover img{
       transform: scale(1);

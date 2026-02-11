@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Home</title>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
       <link rel="stylesheet" href="/Green_mount/css/home.css">
@@ -19,13 +19,14 @@
 <body>
       <header class="position-sticky top-0">
             <!-- This is a collapsable header is collapse in sm and low screens -->
-            <nav class="navbar navbar-expand-lg py-2" >
+            <nav class="navbar navbar-expand-lg py-2 fullNav">
                   <div class="container-fluid  px-4">
                         <!-- This is the logo pic and the name of school -->
-                        <a class="navbar-brand navLogo d-flex align-items-center " href="/Green_mount/pages/home.html">
+                        <a class="navbar-brand navLogo d-flex align-items-center p-0"
+                              href="/Green_mount/pages/home.html">
                               <div class="row">
                                     <div class="col-2">
-                                          <img src="/Green_mount/img/gmaLogo.webp" alt="" class="img-fluid">
+                                          <img src="/Green_mount/img/gmaLogo.PNG" alt="" class="img-fluid">
                                     </div>
                                     <div class="col-10">
                                           <h2>+2 Green Mount Academy</h2>
@@ -39,13 +40,14 @@
                               <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse navButn justify-content-end">
-                              <!-- links for the nto collapsed screen -->
+                              <!-- links for the non collapsed screen -->
                               <div class="navbar-nav">
-                                    <a class="nav-link px-4  active" aria-current="page" href="/Green_mount/pages/home.html">Home</a>
+                                    <a class="nav-link px-4  active" aria-current="page"
+                                          href="/Green_mount/pages/home.html">Home</a>
                                     <a class="nav-link px-4 " href="/Green_mount/pages/gallery.html">Gallery</a>
                                     <a class="nav-link px-4 " href="/Green_mount/pages/branches.html">Branches</a>
-                                    <a class="nav-link px-4 " href="#">Facilities</a>
-                                    <a class="nav-link px-4 " href="#">Contact</a>
+                                    <a class="nav-link px-4 " href="/Green_mount/pages/contact.html">Contact</a>
+                                    <a class="nav-link px-4 " href="/Green_mount/pages/about.html">About</a>
                               </div>
                         </div>
                   </div>
@@ -71,8 +73,8 @@
                                     href="/Green_mount/pages/home.html">Home</a>
                               <a class="nav-link px-4 " href="/Green_mount/pages/gallery.html">Gallery</a>
                               <a class="nav-link px-4 " href="/Green_mount/pages/branches.html">Branches</a>
-                              <a class="nav-link px-4 " href="#">Facilities</a>
-                              <a class="nav-link px-4 " href="#">Contact</a>
+                              <a class="nav-link px-4 " href="/Green_mount/pages/contact.html">Contact</a>
+                              <a class="nav-link px-4 " href="/Green_mount/pages/about.html">About</a>
                         </div>
                   </div>
             </div>
@@ -82,211 +84,210 @@
             <section class=" container-fluid p-4 bannerLogo">
                   <div class="row text-center ">
                         <div class="col-12">
-                              <img src="/Green_mount/img/gmaLogo.webp" class="img-fluid" alt="">
+                              <img src="/Green_mount/img/gmaLogo.PNG" class="img-fluid" alt="">
                               <h1>+2 Green Mount Academy</h1>
                               <p>FOUNDED 1997</p>
+                              <div class="buttons">
+                                    <button class=" contBtn">Contact Us</button>
+                                    <button class=" gallBtn">About US</button>
+                              </div>
+                        </div>
+                  </div>
+            </section>
+            <!-- Status row -->
+            <section class="container-fluid stats text-center">
+                  <div class="container">
+                        <div class="row g-4">
+                              <div class="col-sm-3 col-6"><i class="bi bi-mortarboard"></i>
+                                    <h5>1500+ Students</h5>
+                              </div>
+                              <div class="col-sm-3 col-6"><i class="bi bi-people"></i>
+                                    <h5>150+ Teachers</h5>
+                              </div>
+                              <div class="col-sm-3 col-6"><i class="bi bi-building"></i>
+                                    <h5>8 Campuses</h5>
+                              </div>
+                              <div class="col-sm-3 col-6"><i class="bi bi-trophy"></i>
+                                    <h5>25+ Years</h5>
+                              </div>
                         </div>
                   </div>
             </section>
             <!-- This is mission section it has three partition for lg> screens, two partition for sm> -->
-            <section class=" container-fluid py-sm-5 mt-sm-5 py-3 mt-2 ourMission">
+            <section class=" container-fluid py-sm-4  py-3  ourMission" id="mission"> 
                   <div class="container">
                         <div class="row">
                               <div class="col-12">
-                                    <h1 class=" text-uppercase">our mission</h1>
-                                    <hr>
+                                    <h1 class="text-center">Our Mission</h1>
                               </div>
                         </div>
                         <!-- creating partition as per the screen using bootstrap -->
-                        <div class="row g-sm-5 gy-3">
-                              <div class="col-sm-4 col-12 ">
-                                    <p>Our mission is to provide quality education that helps every student grow
-                                          academically, socially, and emotionally. We want our students to develop
-                                          strong values, good habits, and a positive attitude towards learning. We aim
-                                          to teach good values, respect, and responsibility while providing a healthy
-                                          and positive learning environment.
-                                    </p>
+                        <div class="row text-center">
+                              <div class="col-lg-4 col-12 missBox ">
+                                    <div Class="shadow-lg border rounded">
+                                          <h1><i class="bi bi-mortarboard"></i></h1>
+                                          <h2>Quality Education</h2>
+                                          <p>Our mission is to provide quality education that helps every student grow
+                                                academically, socially, and emotionally. We want our students to develop
+                                                strong values, good habits, and a positive attitude towards learning. We
+                                                aim
+                                                to teach good values, respect, and responsibility while providing a
+                                                healthy
+                                                and positive learning environment.
+                                          </p>
+                                          <a href="">Learn More <i class="bi bi-chevron-right"></i></a>
+                                    </div>
                               </div>
-                              <div class="col-sm-4 col-12 ">
-                                    <p>
-                                          We aim to create a safe, friendly, and supportive environment where every
-                                          child
-                                          feels confident and encouraged. Our teachers work with dedication to ensure
-                                          that all
-                                          students understand their subjects well and improve day by day. Our teachers
-                                          guide
-                                          each student with care and dedication so they can discover their strengths and
-                                          talents.
-                                    </p>
+                              <div class="col-lg-4 col-12 missBox">
+                                    <div Class="shadow-lg border rounded">
+                                          <h1><i class="bi bi-shield-fill-check"></i></h1>
+                                          <h2>Safe Environment</h2>
+                                          <p>
+                                                We aim to create a safe, friendly, and supportive environment where
+                                                every
+                                                child
+                                                feels confident and encouraged. Our teachers work with dedication to
+                                                ensure
+                                                that all
+                                                students understand their subjects well and improve day by day. Our
+                                                teachers
+                                                guide
+                                                each student with care and dedication so they can discover their
+                                                strengths and
+                                                talents.
+                                          </p>
+                                          <a href="">Learn More <i class="bi bi-chevron-right"></i></a>
+                                    </div>
                               </div>
-                              <div class="col-sm-4 col-12 ">
-                                    <p>
-                                          Along with studies, we focus on sports, activities, and overall
-                                          development so that students become responsible, disciplined, and capable
-                                          individuals. Our goal is to prepare students to face future challenges and
-                                          become
-                                          proud citizens of India. Along with studies, we focus on sports and activities
-                                          to
-                                          support balanced growth.
-                                    </p>
-                              </div>
-                        </div>
-                  </div>
-            </section>
-            <!-- Picture slider with navigation button for each picture -->
-            <section class="container-fluid  py-sm-5 py-3 px-0">
-                  <div id="slider1" class="carousel slide Slider1">
-                        <!-- Navigation button for each Picture -->
-                        <div class="carousel-indicators">
-                              <button type="button" data-bs-target="#slider1" data-bs-slide-to="0" class="active"
-                                    aria-current="true" aria-label="Slide 1"></button>
-                              <button type="button" data-bs-target="#slider1" data-bs-slide-to="1"
-                                    aria-label="Slide 2"></button>
-                              <button type="button" data-bs-target="#slider1" data-bs-slide-to="2"
-                                    aria-label="Slide 3"></button>
-                              <button type="button" data-bs-target="#slider1" data-bs-slide-to="3"
-                                    aria-label="Slide 3"></button>
-                              <button type="button" data-bs-target="#slider1" data-bs-slide-to="4"
-                                    aria-label="Slide 3"></button>
-                              <button type="button" data-bs-target="#slider1" data-bs-slide-to="5"
-                                    aria-label="Slide 3"></button>
-                        </div>
-                        <!-- Pictures for the slider -->
-                        <div class="carousel-inner">
-                              <div class="carousel-item active">
-                                    <img src="/Green_mount/img/slide1Pic1.webp" class="d-block w-100" alt="...">
-                              </div>
-                              <div class="carousel-item">
-                                    <img src="/Green_mount/img/slide1Pic2.webp" class="d-block w-100" alt="...">
-                              </div>
-                              <div class="carousel-item">
-                                    <img src="/Green_mount/img/slide1Pic3.webp" class="d-block w-100" alt="...">
-                              </div>
-                              <div class="carousel-item">
-                                    <img src="/Green_mount/img/slide1Pic4.webp" class="d-block w-100" alt="...">
-                              </div>
-                              <div class="carousel-item">
-                                    <img src="/Green_mount/img/slide1Pic5.webp" class="d-block w-100" alt="...">
-                              </div>
-                              <div class="carousel-item">
-                                    <img src="/Green_mount/img/slide1Pic6.webp" class="d-block w-100" alt="...">
-                              </div>
+                              <div class="col-lg-4 col-12 missBox">
+                                    <div Class="shadow-lg border rounded">
+                                          <h1><i class="bi bi-trophy"></i></h1>
+                                          <h2>Holistic Growth</h2>
+                                          <p>
+                                                Along with studies, we focus on sports, activities, and overall
+                                                development so that students become responsible, disciplined, and
+                                                capable
+                                                individuals. Our goal is to prepare students to face future challenges
+                                                and
+                                                become
+                                                proud citizens of India. Along with studies, we focus on sports and
+                                                activities
+                                                to
+                                                support balanced growth.
+                                          </p>
+                                          <a href="">Learn More <i class="bi bi-chevron-right"></i></a>
 
+                                    </div>
+                              </div>
                         </div>
-                        <!-- Forward and previous button for the slider -->
-                        <button class="carousel-control-prev" type="button" data-bs-target="#slider1"
-                              data-bs-slide="prev">
-                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                              <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#slider1"
-                              data-bs-slide="next">
-                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                              <span class="visually-hidden">Next</span>
-                        </button>
                   </div>
             </section>
             <!-- Facilities section divided into two partition  for sm> screens-->
-            <section class="container-fluid facilities py-sm-5 py-3">
+            <section class="container-fluid facilities py-sm-5 py-3 " id="faci">
                   <div class="container">
-
                         <div class="row gy-4">
                               <div class="col-12">
                                     <h1 class=" text-uppercase">Facilities for students</h1>
-                                    <hr>
                               </div>
                         </div>
+                        <hr>
                         <!-- creating partition as per the screen using bootstrap -->
-                        <div class="row py-3">
-                              <div class="col-sm-6 col-12 px-4">
-                                    <h2>Hostel Facilities</h2>
-                                    <p>Our school provides safe and well-maintained hostel facilities for both boys and
-                                          girls. Each hostel is supervised by trained wardens to ensure discipline,
-                                          comfort, and proper care. Students receive healthy meals, study support, and a
-                                          homely environment that helps them focus on learning and personal growth</p>
+                        <div class="row py-3 gy-3">
+                              <div class="col-lg-3 col-sm-6 col-12 px-4 faciBox">
+                                    <div class=" h-100 d-flex flex-column">
+                                          <img class="img-fluid faci-img"
+                                                src="https://imgs.search.brave.com/4IL5O-J4zltQMEUAlODoAYt_jDDKr_7HQmRmovuA544/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMucGV4ZWxzLmNv/bS9waG90b3MvNTEz/Nzk4MC9wZXhlbHMt/cGhvdG8tNTEzNzk4/MC5qcGVnP2F1dG89/Y29tcHJlc3MmY3M9/dGlueXNyZ2ImZHBy/PTEmdz01MDA"
+                                                alt="">
+                                          <h2>Hostel Facilities</h2>
+                                          <p>Our school provides safe and well-maintained hostel facilities for both
+                                                boys and
+                                                girls. Each hostel is supervised by trained wardens to ensure
+                                                discipline,
+                                                comfort, and proper care. Students receive healthy meals, study support,
+                                                and a
+                                                homely environment that helps them focus on learning and personal growth
+                                          </p>
+                                          <a href="">Learn More <i class="bi bi-chevron-right"></i></a>
+                                    </div>
                               </div>
-                              <div class="col-sm-6 col-12 px-4">
-                                    <h2>Playground</h2>
-                                    <p>We have a large playground that allows students to take part in various sports
-                                          and outdoor activities. It provides a perfect space for physical fitness,
-                                          teamwork, and recreation. Regular sports events and games are organized to
-                                          help students stay active, energetic, and healthy throughout the year.</p>
+                              <div class="col-lg-3 col-sm-6 col-12 px-4 faciBox">
+                                    <div class=" h-100 d-flex flex-column">
+                                          <img src="/Green_mount/img/home/faci!Pic2.jpeg" class="img-fluid faci-img" alt="">
+                                          <h2>Playground</h2>
+                                          <p>We have a large playground that allows students to take part in various
+                                                sports
+                                                and outdoor activities. It provides a perfect space for physical
+                                                fitness,
+                                                teamwork, and recreation. Regular sports events and games are organized
+                                                to
+                                                help students stay active, energetic, and healthy throughout the year.
+                                          </p>
+                                          <a href="">Learn More <i class="bi bi-chevron-right"></i></a>
+                                    </div>
                               </div>
-                              <div class="col-sm-6 col-12 px-4">
-                                    <h2>Science Exhibitions</h2>
-                                    <p>The school organizes regular science exhibitions to encourage creativity and
-                                          practical learning among students. These events allow children to present
-                                          models, experiments, and innovative ideas. By participating in exhibitions,
-                                          students build confidence, improve scientific thinking, and develop a deeper
-                                          understanding of the subjects they study.</p>
-                              </div>
-                              <div class="col-sm-6 col-12 px-4">
-                                    <h2>Classes from Pre-Nursery to XII</h2>
-                                    <p>We offer education from Pre-Nursery to Class 12, covering students aged 3 to 18.
-                                          This allows children to complete their entire schooling journey in one place.
-                                          Our curriculum supports each age group with the right guidance, helping
-                                          students grow step-by-step towards academic and personal success.</p>
+                              <div class="col-lg-6 col-sm-12 col-12 px-4 faciBox">
+                                    <div class="h-100 d-flex flex-column">
+                                          <img src="https://imgs.search.brave.com/5p8Wd0ymKR7_OjvDagLJh-6HaMvbDRfJZ6KJJgZxoe0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wMzAv/NDM0LzQ3NS9zbWFs/bC9lbXB0eS1jbGFz/c3Jvb20tc2Nob29s/LXdpdGhvdXQtc3R1/ZGVudC1vci10ZWFj/aGVyLWVtcHR5LWNo/YWlyLWFuZC10YWJs/ZS1lbXB0eS1zdHVk/eS1yb29tLWFpLWdl/bmVyYXRpdmUtcGhv/dG8uanBn"
+                                                class=" img-fluid img-big" alt="">
+                                          <h2>Classes from Pre-Nursery to XII</h2>
+                                          <p>We offer education from Pre-Nursery to Class 12, covering students aged 3
+                                                to 18.
+                                                This allows children to complete their entire schooling journey in one
+                                                place.
+                                                Our curriculum supports each age group with the right guidance, helping
+                                                students grow step-by-step towards academic and personal success.</p>
+                                          <a href="">Learn More <i class="bi bi-chevron-right"></i></a>
+                                    </div>
                               </div>
                         </div>
                   </div>
             </section>
             <!-- event photo section divided into 4 partition for lg> screens, 2 partition for sm> screens -->
-            <section class="container-fluid eventPhotos p-sm-5 py-3">
-                  <!-- creating partition for each screen using bootstrap -->
-                  <!-- photos have a hover effect externally without bootstrap -->
-                  <div class="row gx-5 gy-4">
-                        <div class="col-lg-3 col-sm-6 col-12">
-                              <div class="card text-bg-dark   eventBox">
-                                    <img src="/Green_mount/img/eventPic1.webp" class="card-img" alt="..."
-                                          class=" img-fluid">
-                                    <div class="card-img-overlay ">
-                                          <h5 class="card-title">Card title</h5>
-                                          <p class="card-text">This is a wider card with supporting text below as a
-                                                natural lead-in to additional content. This content is a little bit
-                                                longer.</p>
+            <section class="container-fluid eventPhotos py-sm-3 py-3" id="event">
+                  <div class="container">
+                        <div class="row">
+                              <div class="col-12">
+                                    <h1 class="">Recent Events</h1>
+                              </div>
+                        </div>
+                        <div class="row gy-4 ">
+                              <div class="col-lg-3 col-sm-6 col-12 eventBox ">
+                                    <div class="card text-bg-dark ">
+                                          <img src="/Green_mount/img/eventPic1.JPG" class="card-img p-1" alt="...">
+                                          <div class="card-img-overlay ">
+                                                <h5 class="card-title " style="background-color: #1E6BB8;">Science <br>  Exhibition</h5>
+                                          </div>
+                                    </div>
+                              </div>
+                              <div class="col-lg-3 col-sm-6 col-12 eventBox">
+                                    <div class="card text-bg-dark ">
+                                          <img src="/Green_mount/img/eventPic2.JPG" class="card-img p-1" alt="...">
+                                          <div class=" card-img-overlay">
+                                          <h5 class=" card-title"style="background-color: #E64A2E;">Annual <br>Function</h5>
                                     </div>
                               </div>
                         </div>
-                        <div class="col-lg-3 col-sm-6 col-12">
-                              <div class="card text-bg-dark eventBox">
-                                    <img src="/Green_mount/img/eventPic4.webp" class="card-img" alt="..."
-                                          class=" img-fluid">
+                        <div class="col-lg-3 col-sm-6 col-12 eventBox">
+                              <div class="card text-bg-dark ">
+                                    <img src="/Green_mount/img/eventPic3.JPG" class="card-img p-1" alt="...">
                                     <div class="card-img-overlay">
-                                          <h5 class="card-title">Card title</h5>
-                                          <p class="card-text">This is a wider card with supporting text below as a
-                                                natural lead-in to additional content. This content is a little bit
-                                                longer.</p>
+                                          <h5 class="card-title"style="background-color: #4C8F2E;">Sports <br>Activities</h5>
                                     </div>
                               </div>
                         </div>
-                        <div class="col-lg-3 col-sm-6 col-12">
-                              <div class="card text-bg-dark eventBox">
-                                    <img src="/Green_mount/img/eventPic3.webp" class="card-img" alt="..."
-                                          class=" img-fluid">
+                        <div class="col-lg-3 col-sm-6 col-12 eventBox">
+                              <div class="card text-bg-dark ">
+                                    <img src="/Green_mount/img/eventPic4.JPG" class="card-img p-1" alt="...">
                                     <div class="card-img-overlay">
-                                          <h5 class="card-title">Card title</h5>
-                                          <p class="card-text">This is a wider card with supporting text below as a
-                                                natural lead-in to additional content. This content is a little bit
-                                                longer.</p>
-                                    </div>
-                              </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 col-12">
-                              <div class="card text-bg-dark eventBox">
-                                    <img src="/Green_mount/img/eventPic4.webp" class="card-img" alt="..."
-                                          class=" img-fluid">
-                                    <div class="card-img-overlay">
-                                          <h5 class="card-title">Card title</h5>
-                                          <p class="card-text">This is a wider card with supporting text below as a
-                                                natural lead-in to additional content. This content is a little bit
-                                                longer.</p>
+                                          <h5 class="card-title"style="background-color: #F7941D;">Republic<br> Day</h5>
                                     </div>
                               </div>
                         </div>
                   </div>
+                  </div>
             </section>
             <!-- About section  -->
-            <section class="container-fluid aboutUs py-sm-5 py-3 ">
+            <section class="container-fluid aboutUs py-sm-5 py-3 " id="about">
                   <div class="container">
                         <div class="row">
                               <div class="col-12">
@@ -315,10 +316,57 @@
                         </div>
                   </div>
             </section>
+            <!-- Picture slider with navigation button for each picture -->
+
       </main>
       <footer>
             <!-- footer  -->
             <section class="container-fluid footer p-4">
+                  <div class="quick_links container p-5">
+                        <div class="row row-cols-5 justify-content-center ">
+                              <div class="home">
+                                    <h3 class="list-group-item">Home</h3>
+                                    <a href="/Green_mount/pages/home.html#mission" class="list-group-item">Mission</a>
+                                    <a href="/Green_mount/pages/home.html#faci" class="list-group-item">Facilities</a>
+                                    <a href="/Green_mount/pages/home.html#event" class="list-group-item">Events</a>
+                                    <a href="/Green_mount/pages/home.html#about" class="list-group-item">About</a>
+                              </div>
+                              <div class="gall">
+                                    <h3 class="list-group-item">Gallery Links</h3>
+                                    <a href="/Green_mount/pages/gallery.html#campus" class="list-group-item">School Campus</a>
+                                    <a href="/Green_mount/pages/gallery.html#classroom" class="list-group-item">Classrooms</a>
+                                    <a href="/Green_mount/pages/gallery.html#SciExhi" class="list-group-item">Science Exhibition</a>
+                                    <a href="/Green_mount/pages/gallery.html#" class="list-group-item">Transport</a>
+                                    <a href="/Green_mount/pages/gallery.html#" class="list-group-item">Grounds</a>
+                                    <a href="/Green_mount/pages/gallery.html#" class="list-group-item">Activities</a>
+                                    <a href="/Green_mount/pages/gallery.html#" class="list-group-item">Parade</a>
+                              </div>
+                              <div class="branch">
+                                    <h3 class="list-group-item">Branch Links</h3>
+                                    <a href="" class="list-group-item">Main Branch</a>
+                                    <a href="" class="list-group-item">G.M.A Baxi Bandh </a>
+                                    <a href="" class="list-group-item">First Step "A play School"</a>
+                                    <a href="" class="list-group-item">G.M.A Jama</a>
+                                    <a href="" class="list-group-item">N.N Academy</a>
+                                    <a href="" class="list-group-item">First step, Rashikpur</a>
+                                    <a href="" class="list-group-item">Rose Garden, Ramghar</a>
+                                    <a href="" class="list-group-item">G.M.A Khatikhund</a>
+                              </div>
+                              <div class="contact">
+                                    <h3 class="list-group-item">Contact</h3>
+                                    <a href="" class="list-group-item">Address</a>
+                                    <a href="" class="list-group-item">Email</a>
+                                    <a href="" class="list-group-item">First Step "A play School"</a>
+                              </div>
+                              <div class="about">
+                                    <h3 class="list-group-item">About</h3>
+                                    <a href="" class="list-group-item">Branches</a>
+                                    <a href="" class="list-group-item">Teachers</a>
+                                    <a href="" class="list-group-item">Hostel</a>
+                                    <a href="" class="list-group-item">Admission</a>
+                              </div>
+                        </div>
+                  </div>
                   <div class="container text-center">
                         <p class="m-0">&copy;Green Mount Academy | All Rights Reversed</p>
                   </div>

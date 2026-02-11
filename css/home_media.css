@@ -29,36 +29,51 @@
             font-size: 20px;
       }
       .bannerLogo p{
-            font-size: 12px;
+            font-size: 12px; 
       }
       .bannerLogo img{
             width: 30px;
       }
 
+      
+      .missBox{
+            padding: 10px 10px;
+      }
+      .missBox h1{
+            font-size: 10px;
+      }
       .ourMission h1{
             font-size: 40px;
       }
       .ourMission p{
-            font-size: 17px;
-            line-height: 25px;
+            font-size: 13px;
+      }
+      .ourMission h2{
+            font-size: 24px;
+      }
+      .ourMission a{
+            font-size: 20px;
+      }
+
+      
+      .facilities h1{
+            text-align: center;
+            font-size: 30px;
+            font-weight: 700;
+            margin-left: 0;
+
+      }
+      .facilities h2{
+            font-size: 25px;
+      }
+      .facilities p{
+            font-size: 14px;
+            font-weight: 100;
       }
 
       .Slider1{
             height: 40vh;
             overflow: hidden;
-      }
-
-      .facilities h1{
-            font-size: 40px;
-      }
-      .facilities h2{
-            font-size: 30px;
-      }
-      .facilities p{
-            font-size: 16px;
-            font-weight: 100;
-            word-spacing: 3px;
-            line-height: 25px;
       }
 
       .aboutUs h1{
@@ -72,6 +87,13 @@
             line-height: 25px;
       }
 
+      .eventBox img {
+            max-height: 500px;
+            padding: 0 25px;
+      }
+      .eventPhotos h1{
+            font-size: 35px;
+      }
 }
 
 /* Additional changes of tabs (sm> and <lg) screen to fit all content smoothly */

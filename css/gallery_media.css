@@ -1,0 +1,6 @@
+@media only screen and (min-width:200px) and (max-width:575px){
+      .image_conatiner img{
+            height: 200px;
+            width: 400px;
+      }
+}

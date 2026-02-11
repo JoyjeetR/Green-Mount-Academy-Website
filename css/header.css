@@ -1,34 +1,109 @@
 *{
-      font-family: 'Times New Roman', Times, serif;
+  font-family: "Poppins", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+body{
+      opacity: 0.5;
+      animation: fadeIn 1s ease forwards;
 }
 
 header{
       z-index: 100;
-      background-color:  rgba(72, 159, 99, 0.947) !important;
+      background-color:  #0f6b3e !important;
+      color: white;
 }
-
+.navLogo{
+      padding: 0;
+}
 .navLogo img{
-      width: 70px;
+      width: 40px;
+      margin-left: 20px;
 }
 .navLogo h2{
-      font-size: 32px;
+      font-size: 30px;
       font-weight: 500;
-      margin-bottom: 0;
+      color: white;
+      margin: 0;;
 }
 .navLogo p{
-      font-size: 16px;
+      font-size: 12px;
       font-weight: 400;
+      color: white;
 }
 
 .navButn a{
-      font-size: 22px;
+      font-size: 18px;
+      position: relative;
+      margin-left: 5px;
+      color: white;
+
+}
+
+.navButn a:before {
+      content: "";
+      position: absolute;
+      width: 0;
+      background : #0a3606;
+      left: 45%;
+      height: 2px;
+      bottom: 0;
+      transition: all .3s;
+      opacity: 0.7;
+}
+
+.navButn a:hover:before {
+      width: 100%;
+      left:0;
+}
+.nav-link.active:before{
+      content: "";
+      position: absolute;
+      width: 100%;
+      background : #0a3606;
+      left: 0%;
+      height: 2px;
+      bottom: 0;
+      transition: all .3s;
+      opacity: 0.7;
 }
 
 
 footer{
-      background-color: rgb(0, 128, 68);
+      background : #0f6b3e;
       align-items: center;
+      color: rgb(30, 33, 30);
 }
-footer p{
-      font-size: 24px;
+footer h3{
+      text-align: center;
 }
+footer a{
+      margin-left:80px ;
+      font-size: 16px;
+      transition: all 0.1s ease;
+}
+footer a:hover{
+      text-decoration: underline;
+      color: black;
+      font-size: 17px;
+}
+.gall a{
+      margin-left: 35px;
+}
+.branch a{
+      margin-left: 35px;
+}
+.contact a{
+      margin-left: 65px;
+}
+
+@keyframes fadeIn {
+      from{
+            opacity: 0;
+      }
+      to{
+            opacity: 1;
+      }
+}
+

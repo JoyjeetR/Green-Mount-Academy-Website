@@ -111,8 +111,8 @@ body{
 
 .btn-branch {
       width: 100%;
-      border-radius: 30px;
-      background-color: rgba(144, 238, 144, 0.493);
+      border-radius: 20px;
+      background-color: var(--green);
       box-shadow: inset  4px 4px 10px rgb(19, 119, 46),
       inset  -5px -5px 20px rgb(143, 221, 152);
       transition: all .5s ease;

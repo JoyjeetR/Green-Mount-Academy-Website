@@ -55,6 +55,12 @@
       font-size:2rem;
       color:var(--green);
 }
+.stats a{
+      text-decoration: none;
+      color: black;
+      font-size: 18px;
+      font-weight: 500;
+}
 
 /* Cards */
 .icon-card{

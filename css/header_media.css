@@ -13,14 +13,92 @@
       }
       .navLogo {
             margin: 0;
+      }     
+      .navLogo img{
+            margin-left: 0px;
       }
       .navbar-toggler {
-            position: fixed;
-            top: 14px;
-            left: 8px;
+            position: absolute;
+            right: 10px;
       }
-      footer p{
-            font-size: 14px;
+      /* Hide desktop footer columns */
+      .footer-top{
+            display:none;
+      }
+      /* MOBILE */
+      .main-footer{
+            padding:20px 15px;
+      }
+      .footer-mobile{
+            padding:0;
+      }
+
+      .footer-accordion-item{
+            border-bottom:1px solid #ffffff22;
+            margin-bottom:8px;
+      }
+
+      .footer-accordion-btn{
+            width:100%;
+            background:none;
+            border:none;
+            color:#fff;
+            text-align:left;
+            padding:12px 0;
+            font-size:15px;
+            font-weight:500;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+      }
+
+      .footer-accordion-btn i{
+            transition:.3s ease;
+      }
+
+      .footer-accordion-content{
+            padding-bottom:10px;
+            display:flex;
+            flex-direction:column;
+      }
+
+      .footer-accordion-content a{
+            color:#ffffffcc;
+            text-decoration:none;
+            font-size:13px;
+            padding:5px 0 5px 10px;
+      }
+
+      .footer-accordion-content a:hover{
+            color:#fff;
+      }
+
+      /* Compact Contact */
+      .footer-contact-mobile p{
+            font-size:13px;
+            margin:4px 0;
+      }
+
+      .footer-social-mobile a{
+            display:inline-flex;
+            justify-content:center;
+            align-items:center;
+            width:32px;
+            height:32px;
+            background:#ffffff22;
+            border-radius:50%;
+            margin:8px 6px 0;
+            color:#fff;
+            font-size:13px;
+      }
+
+      .footer-social-mobile a:hover{
+            background:#fff;
+            color:#0f6b3e;
+      }
+      #smartScrollWrapper{
+            right:14px;
+            bottom:80px; /* thumb reach */
       }
 }
 

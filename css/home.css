@@ -3,25 +3,42 @@
 }
 :root{
       --green: #0a3606;
+      --yellow-blue:#e9f0e5;
+      --off-white: #f1f1f1;
+}
+
+body{
+      background: var(--off-white);
+
 }
 
 
+/* ---------------------------------- Banner Section --------------------------------------- */
 .bannerLogo{
-      /* setting background image for the first banner of school */
-      background: url(/Green_mount/img/banner.JPG) center/cover no-repeat;
-      height: 68vh;
+      background:
+      linear-gradient(rgba(0, 0, 0, 0.186), rgba(0,0,0,0.65)),
+      url(../img/banner.webp) center/cover no-repeat;
+      height: 75vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
       color: white;
-} 
+}
+
 .bannerLogo h1{
-      margin: 0;
-      font-weight: 600;
-      font-size: 3rem;
+      font-size: 3.5rem;
+      font-weight: 700;
+      letter-spacing: 2px;
 }
+
 .bannerLogo p{
-      font-family: Helvetica, Arial, sans-serif;
-      font-weight: 500;
-      font-size: 18px;
+      font-size: 20px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      opacity: 0.9;
 }
+
 .bannerLogo img{
       width:70px;
 }
@@ -46,10 +63,20 @@
       border: 1px solid white;
 }
 
+/* ---------------------------------- Stats Section --------------------------------------- */
+.stats .col-sm-3{
+      padding:20px;
+      transition: all 0.3s ease;
+}
 
+.stats .col-sm-3:hover{
+      transform: translateY(-5px);
+}
 .stats{
-      background:#fff;
+      background:var(--off-white);
       padding:40px 0;
+      border-top: 1px solid #000000;
+      border-bottom: 1px solid #e0e0e0;
 }
 .stats i{
       font-size:2rem;
@@ -70,16 +97,17 @@
       box-shadow:0 10px 25px rgba(0,0,0,.05);
       height:100%;
 }
+/* ---------------------------------- Mission Section --------------------------------------- */
 
-/* font sizing for mission section */
 .ourMission{
-      background-color: #fbfbef;
+      background-color: var(--yellow-blue);
 }
 .ourMission h1{
-      font-size: 50px;
-      font-weight: 100;
       margin-bottom: 15px;
-      color: var(--green)
+      color: var(--green)   ;  
+      font-size: 50px;
+      font-weight: 600;
+      letter-spacing: 1px;
 }
 .ourMission p{
       font-size: 15px;
@@ -97,6 +125,8 @@
       box-shadow: 0 5px 35px rgba(0, 0, 0, 0.192) !important;
       border: 1px solid rgba(0, 0, 0, 0.44) !important;
       transition: all 0.3s ease;
+      background:white;
+      border-radius:15px;
 }
 .missBox div:hover{
       box-shadow: 0 2px 20px var(--green) !important;
@@ -114,8 +144,11 @@
       color: var(--green);
 }
 
-
+/* ---------------------------------- Facility Section --------------------------------------- */
 /* font sizing for facilities section */
+.facilities{
+      background: var(--off-white);
+}
 .facilities h1{
       font-size: 40px;
       letter-spacing: 2px;
@@ -132,9 +165,10 @@
       border-radius: 10px;
       box-shadow: 0 5px 35px rgba(0, 0, 0, 0.192) !important;
       overflow: hidden  ;
+      transition: all 0.3s ease;
 }
-.faciBox div:hover  img{
-      transform: scale(1.1);
+.faciBox div:hover{
+      transform: translateY(-8px);
 }
 .faci-img{
       height: 200px;        /* SAME HEIGHT */
@@ -171,43 +205,68 @@
       padding-bottom: 10px;
 }
 
+/* ---------------------------------- Event Section --------------------------------------- */
 /* Event section styling */
-.eventPhotos{
-      background-color: #d4e6da63 ;
-}
-.eventPhotos h1{
-      font-size: 45px;
-      text-align: center;
-      color: var(--green);
-      padding: 10px 0;
-}
-.eventBox div{
-      overflow: hidden;
-      box-shadow: 0 5px 35px rgba(0, 0, 0, 0.381) !important;
-}
-.eventBox {
-      padding: 0 25px;
-}
-/* Hover effect for the event pictures on hover it scales to 1 form 1.5 */
-.eventPhotos img{
-      transform: scale(1.3);
-      transition: all 1s ease;
+.events-section {
+    background: var(--yellow-blue   );
 }
 
-.eventBox div:hover img{
-      transform: scale(1);
-}
-.eventBox h5{
-      font-size: 30px;
-      position: absolute;
-      width: 100%;
-      bottom: -10px;
-      left: 0;
-      padding: 5px 0 5px 20px;
-      border-top:2px solid black;
+.section-header h2 {
+    font-weight: 700;
+    font-size: 36px;
+    color: #198754;
 }
 
+.section-header p {
+    color: #666;
+    font-size: 15px;
+}
 
+/* Event Card */
+
+.event-card {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.event-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+/* Dark gradient overlay */
+.event-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+    color: white;
+    transition: background 0.3s ease;
+}
+
+.event-overlay h5 {
+    margin: 0;
+    font-weight: 600;
+}
+
+/* Hover Effects (Desktop only feel) */
+
+.event-card:hover {
+    transform: translateY(-10px);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+}
+
+.event-card:hover img {
+    transform: scale(1.1);
+}
+
+/* ---------------------------------- About Section --------------------------------------- */
 .aboutUs h1{
       font-size: 60px;
       font-weight: 100;
@@ -221,3 +280,164 @@
       line-height: 30px;
 }
 
+/* ------------------------- Branch Overview -----------------------------------*/
+.branches-section {
+    background: var(--yellow-blue);
+}
+
+.branch-card {
+    height: 300px;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    transition: transform 0.4s ease;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+}
+
+.branch-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+.branch-overlay {
+      width: 100%;
+      padding: 25px;
+      background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+      color: white;
+}
+
+.branch-overlay h5 {
+      font-weight: 700;
+}
+
+.branch-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 6px 18px;
+      background: rgb(255, 255, 255) !important;
+      color: #198754;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+            transition: all 0.3s ease;
+}
+
+.branch-btn:hover{
+      background:#198754 !important;
+      color:white;
+}
+
+
+/* ------------------------- Admission CTA -----------------------------------*/
+.admission-cta {
+      padding: 80px 20px;
+      color: white;
+      position: relative;
+      background: linear-gradient(135deg, #0f5132, #198754);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      border-radius: 20px;
+      margin: 40px 20px;
+}
+
+.admission-cta h2 {
+      font-size: 36px;
+    font-weight: 700;
+}
+
+.admission-cta p {
+    font-size: 18px;
+    margin: 15px 0 30px;
+}
+
+.cta-buttons .btn {
+    padding: 12px 28px;
+    margin: 5px;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn-apply {
+      background: white;
+      color: #0f5132;
+}
+.btn-apply:hover {
+      background: #f8f9fa;
+    color: var(--green);
+    transform: scale(1.05);
+}
+
+.btn-visit {
+      border: 2px solid white;
+      color: white;
+}
+
+
+
+.btn-visit:hover {
+      background: white;
+      color: #0f5132;
+}
+
+
+/* ---------------------------------- Quick Action Section only for mobile  --------------------------------------- */
+/* =====================================
+   PREMIUM FLOATING QUICK ACTION BAR
+===================================== */
+
+.quick-action-bar {
+    position: fixed;
+    bottom: 10px;
+    left: 15px;
+    right: 15px;
+    height: 60px;
+    background: #0f5132;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    z-index: 1200;
+}
+
+/* Each Button */
+.quick-action-bar .action-btn {
+      display: flex;
+      flex-direction: column ;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      color: white;
+      font-size: 14px;
+}
+
+/* Icons */
+.quick-action-bar .action-btn i {
+      font-size: 16px;
+    margin-bottom: 2px;
+}
+
+/* Button Colors */
+
+.quick-action-bar .branch-btn {
+    background: #0f5132!important;
+    margin: 0;
+}
+
+
+/* Press Effect */
+.quick-action-bar .action-btn:active {
+    transform: scale(0.95);
+}
+
+/* Hide on Desktop */
+@media (min-width: 992px) {
+    .quick-action-bar {
+        display: none;
+    }
+}

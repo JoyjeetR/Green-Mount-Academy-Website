@@ -5,72 +5,108 @@
 *{
       padding: 0;
       margin: 0;
-      font-family: 'Times New Roman', Times, serif;
 }
 
 body{
       background-color: var(--cream);
 }
 
-.banner-text{
-      position: absolute;
-      text-transform: uppercase;
-      font-size: 90px;
-      z-index: 1;
-      width: 100%;
-      height: 100%;
-      justify-content: center;
-      display: flex;
-      align-items: center;
-      font-weight: 700;
-      color: white;
+/* Hide mobile banner by default */
+.mobile-banner {
+      display: none;
 }
 
+/* Desktop slider visible by default */
+.desktop-slider {
+      display: block;
+}
+/* ===== RESPONSIVE SLIDER ===== */
+
 .Slider1 {
-    height: 500px;
+    height: 65vh;
+    min-height: 350px;
     overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.44);
-    margin-bottom: 100px;
+    position: relative;
 }
 
 .Slider1 .carousel-item {
-    height: 500px;
+    height: 100%;
 }
 
 .Slider1 .carousel-item img {
+    width: 100%;
     height: 100%;
-    width: 80%;
     object-fit: cover;
-    object-position: center; 
-    margin: auto;
+}
+
+.banner-text {
+    position: absolute;
+    bottom: 170px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    text-align: center;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 90px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    pointer-events: none; /* VERY IMPORTANT */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-size: 60% 60%;
+    filter: invert(1);
 }
 
 
-.branchCard{
-      background: #fff;
-      border-radius: 18px;
-      overflow: hidden;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, .08);
-      transition: .3s;
-      border: 1px solid rgba(0, 0, 0, 0.321);
-}
-.branchCard:hover{
-      transform: scale(1.02);
-      box-shadow: 0 25px 45px rgba(0, 0, 0, 0.277);
+
+
+
+
+.branchCard {
+      backdrop-filter: blur(8px);
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    border: none;
 }
 
-.branchCard img{
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
+.branchCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
 }
-.branchCard a{
-      font-size: 30px;
-      margin-right: 5px;
+
+.branchCard img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
 }
-.branchCard i:hover  {
-      transform: scale(1.1);
+
+.branchBody {
+    padding: 22px;
 }
+
+.branchBody h5 {
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--green);
+    margin-bottom: 8px;
+}
+.branchCard a i {
+    font-size: 25px;
+    margin: 6px;
+    transition: 0.3s ease;
+}
+
+.branchCard a i:hover {
+    transform: scale(1.2);
+}
+
 .insta{
       background: radial-gradient(
       circle at 30% 107%,
@@ -87,52 +123,56 @@ body{
 }
 .branch1{
       width: 60% !important; 
-      height: 250px;
       object-fit: cover;
 }
-.branchBody{
-      padding: 20px;
-}
-
 .location {
-      font-size: .9rem;
-      color: #666;
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 15px;
 }
 
 .key-points {
-      list-style: none;
-      padding: 0;
-      font-size: .9rem;
+    list-style: none;
+    padding: 0;
+    font-size: 14px;
 }
 
 .key-points li {
-      margin-bottom: 6px;
+    margin-bottom: 6px;
+    color: #444;
 }
 
 .btn-branch {
-      width: 100%;
-      border-radius: 20px;
-      background-color: var(--green);
-      box-shadow: inset  4px 4px 10px rgb(19, 119, 46),
-      inset  -5px -5px 20px rgb(143, 221, 152);
-      transition: all .5s ease;
-      border: 1px solid var(--green);
+    width: 100%;
+    border-radius: 30px;
+    background-color: var(--green);
+    color: #fff;
+    font-weight: 500;
+    border: none;
+    padding: 10px 0;
+    transition: all 0.3s ease;
 }
 
 .btn-branch:hover {
-      color: wheat;
-      background-color: rgb(19, 119, 46);
-      box-shadow: inset  5px 5px 5px rgb(19, 119, 46),
-      inset  -5px -5px 20px rgb(34, 87, 40);
-      
+    background-color: #0c5b33;
+    transform: translateY(-2px);
+    box-shadow: inset  5px 5px 5px rgb(19, 119, 46),
+    inset  -5px -5px 20px rgb(34, 87, 40);
+    color: #fff;
 }
+
 
 /* EXPAND */
-.expand-list {
-      padding-left: 18px;
-      font-size: .9rem;
+.branchCard .collapse {
+    background: #f8faf9;
+    padding: 15px;
+    border-radius: 12px;
 }
 
+.expand-list li {
+    font-size: 14px;
+    margin-bottom: 6px;
+}
 .small-text {
       font-size: .85rem;
       color: #555;
@@ -144,4 +184,12 @@ body{
       border: 0;
       border-radius: 12px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, .12);
+}
+
+
+@media (max-width:575px){
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 10%;
+    }
 }

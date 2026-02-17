@@ -1,74 +1,413 @@
 :root{
---green:#0f6b3e;
---cream:#fbfbef;
+    --green:#0f6b3e;
+    --cream:#fbfbef;
+}
+
+/* GLOBAL */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-      background:var(--cream);
-      font-family:"Segoe UI", sans-serif;
+    background:var(--cream);
+    font-family:"Segoe UI", sans-serif;
 }
 
-/* HERO */
+/* ================= HERO ================= */
+
 .contact-hero{
-      background:linear-gradient(rgba(15, 107, 63, 0.641),rgba(15, 107, 63, 0.641)),
-      url("/Green_mount/img/banner.JPG") center/cover;
-      color:#fff;
-      padding:100px 0;
+    background:
+    linear-gradient(to bottom right, rgba(15,107,62,.85), rgba(15,107,62,.7)),
+    url("../img/banner.webp") center/cover no-repeat;
+
+    color:#fff;
+    padding:120px 0;
+    text-align:center;
 }
 
-.info-card{
-      background:#fff;
-      padding:30px;
-      border-radius:18px;
-      box-shadow:0 20px 40px rgba(0,0,0,.1);
-      transition:.3s ease;
+.contact-hero h1{
+    font-size:clamp(32px,5vw,60px);
+    font-weight:700;
+    letter-spacing:3px;
+    margin-bottom:10px;
 }
 
-.info-card:hover{
-      transform:translateY(-5px);
-      box-shadow:0 12px 30px rgba(0, 0, 0, 0.232);
+.contact-hero p{
+    font-size:clamp(14px,2vw,20px);
+    opacity:.9;
 }
 
-.info-card i{
-      font-size:2rem;
-      color:var(--green);
-      margin-bottom:10px;
+/* ================= CHAIRPERSON SECTION ================= */
+
+.chairman-section{
+    background:linear-gradient(to right, #f5faf7, #ffffff);
+    position:relative;
+}
+
+.chairman-card{
+    background:#ffffff;
+    padding:50px;
+    border-radius:30px;
+    box-shadow:0 25px 60px rgba(0,0,0,.08);
+    position:relative;
+    overflow:hidden;
+}
+
+/* Decorative soft circle */
+.chairman-card::before{
+    content:"";
+    position:absolute;
+    width:250px;
+    height:250px;
+    background:rgba(15,107,62,.08);
+    border-radius:50%;
+    top:-80px;
+    right:-80px;
+}
+
+/* Image Design */
+.chairman-image img{
+    width:320px;
+    height:320px;
+    object-fit:cover;
+    border-radius:50%;
+    border:6px solid var(--green);
+    box-shadow:0 20px 50px rgba(0,0,0,.15);
+    transition:.3s ease;
+}
+
+.chairman-image img:hover{
+    transform:scale(1.05);
+}
+
+/* Text Styling */
+.chairman-content h5{
+    color:var(--green);
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:14px;
+    margin-bottom:5px;
+}
+
+.chairman-content h2{
+    font-size:clamp(26px,3vw,40px);
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+.designation{
+    color:#777;
+    margin-bottom:20px;
+}
+
+.chairperson-message{
+    font-style:italic;
+    background:#f7f7f7;
+    padding:15px 20px;
+    border-left:4px solid var(--green);
+    border-radius:10px;
+    margin-bottom:20px;
+}
+
+/* Contact Info */
+.chairman-contact p{
+    margin:8px 0;
+    font-size:16px;
+}
+
+.chairman-contact i{
+    color:var(--green);
+    margin-right:8px;
+}
+
+
+/* ================= BRANCH TABS ================= */
+
+#branchTabs{
+      width: 100%;
+    justify-content: center;
 }
 .branchContact h2{
-      font-size: 40px;
+    font-size:clamp(28px,4vw,40px);
+    margin-bottom:15px;
 }
+
 #branchTabs button{
-      color: #0f6b3e ;
+    color:var(--green) !important;
+    border-radius:25px;
+    margin:5px;
+    padding:8px 18px;
+    transition:.3s ease;
 }
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-      background-color: var(--green);
-      color: white !important;
+
+#branchTabs button:hover{
+    background :var(--green);
+}
+
+.nav-pills .nav-link.active{
+    background-color:var(--green);
+    color:#fff !important;
+}
+
+/* ================================== TAB CONTENT ================================== */
+.principal-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.principal-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.12);
+}
+
+.principal-card img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid var(--green);
+    margin-bottom: 15px;
+}
+
+.principal-card h5 {
+    margin-bottom: 3px;
+    font-weight: 600;
+}
+
+.designation {
+    font-size: 14px;
+    color: var(--green);
+    font-weight: 500;
+}
+
+.small-contact {
+    font-size: 14px;
+    color: #666;
 }
 
 .tab-content{
-      border: 1px solid var(--green);
-      border-radius: 20px;
-      box-shadow: 0 3px 20px rgba(0, 0, 0, 0.143) ;
+    background:#fff;
+    border-radius:25px;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    padding:10px;
+    margin-top:15px;
 }
+
 .tab-pane{
-      padding: 30px;
+    padding:30px;
 }
-/* MAP */
+
+/* ========= MAP ======== */
+
 .map-frame{
-      width:100%;
-      height:250px;
-      border:0;
-      border-radius:15px;
-      box-shadow:0 8px 20px rgba(0,0,0,.08);
+    width:100%;
+    height:250px;
+    border:0;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
 }
 
-/* FORM */
-.contact-form .form-control,
-.contact-form .form-select{
-      border-radius:30px;
-      padding:10px 15px;
+/* ===================================  ENQUIRY SECTION ===========================================  */
+.enquiry-section {
+    background: linear-gradient(to right, #f8fbf9, #ffffff);
+    padding: 80px 0;
 }
 
-.btn-success{
-border-radius:30px;
+.enquiry-card {
+    background: #ffffff;
+    padding: 55px;
+    border-radius: 25px;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
+}
+
+.enquiry-card:hover {
+    transform: translateY(-5px);
+}
+
+   /* LEFT SIDE (LOGO + TEXT) */
+
+.enquiry-left {
+    padding-right: 45px;
+}
+
+.form-logo img {
+    width: 95px;
+    margin-bottom: 18px;
+}
+
+.enquiry-left h3 {
+    color: var(--green);
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.enquiry-left p {
+    color: #666;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.contact-highlight p {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #444;
+}
+
+   /* RIGHT SIDE FORM */
+
+.modern-form .form-control,
+.modern-form .form-select {
+    border-radius: 15px;
+    border: 1px solid #e5e5e5;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+/* Floating label spacing fix */
+.modern-form .form-floating > label {
+    padding-left: 18px;
+    font-size: 13px;
+}
+
+/* Focus effect */
+.modern-form .form-control:focus,
+.modern-form .form-select:focus {
+    border-color: var(--green);
+    box-shadow: 0 0 0 3px rgba(15,107,62,0.12);
+}
+   /* DROPDOWN STYLING */
+
+.modern-form .form-select {
+    cursor: pointer;
+    background-image: linear-gradient(45deg, transparent 50%, var(--green) 50%),
+                      linear-gradient(135deg, var(--green) 50%, transparent 50%),
+                      linear-gradient(to right, #ddd, #ddd);
+    background-position:
+        calc(100% - 20px) calc(1em + 2px),
+        calc(100% - 15px) calc(1em + 2px),
+        calc(100% - 2.5em) 0.6em;
+    background-size: 5px 5px, 5px 5px, 1px 1.5em;
+    background-repeat: no-repeat;
+    /* max-height: 50px; */
+}
+
+/* Dropdown Animation */
+.modern-form .form-select:focus {
+    animation: dropdownPop 0.25s ease;
+}
+
+@keyframes dropdownPop {
+    from {
+        transform: scale(0.98);
+        opacity: 0.8;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+
+/* =========================================
+   TEXTAREA
+========================================= */
+
+.modern-form textarea {
+    resize: none;
+    border-radius: 15px;
+}
+
+/* =========================================
+   SUBMIT BUTTON
+========================================= */
+
+.btn-submit {
+    background: var(--green);
+    color: #fff;
+    padding: 12px 35px;
+    border-radius: 30px;
+    border: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+    background: #0c5732;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(15,107,62,0.25);
+}
+
+/* ===================================== SUCCESS POPUP =============================================== */
+/* SUCCESS POPUP */
+.success-popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.success-popup.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.success-card {
+    background: white;
+    padding: 35px 30px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+    transform: translateY(40px);
+    transition: all 0.3s ease;
+}
+
+.success-popup.show .success-card {
+    transform: translateY(0);
+}
+
+.success-icon {
+    font-size: 50px;
+    color: #28a745;
+    margin-bottom: 15px;
+}
+
+.success-card h4 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.success-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+.success-card button {
+    margin-top: 20px;
+    padding: 8px 20px;
+    border-radius: 30px;
+    border: none;
+    background: #198754;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.success-card button:hover {
+    background: #146c43;
 }

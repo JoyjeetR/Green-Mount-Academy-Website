@@ -16,26 +16,40 @@
             margin: 0;
       }
       .navbar-toggler {
-            position: fixed;
-            top: 14px;
-            right: 8px;
+            position: absolute;
+            right: 10px;
       }
 
-
+      /* ------------------------------------Banner------------------------------------ */
       .bannerLogo{
             height: 40vh;
       }
+      .bannerLogo img{
+            width: 40px;
+      }
       .bannerLogo h1{
-            font-size: 20px;
+            font-size: 25px;
+            letter-spacing: 0;
+            margin: 0;
       }
       .bannerLogo p{
             font-size: 12px; 
       }
-      .bannerLogo img{
-            width: 30px;
-      }
 
+      /* ------------------------------------Stats------------------------------------ */
+      .stats .col-6{
+            display: flex;
+            padding: 0px 20px;
+            align-items: center;
+            margin-top: 10px;
+      }
+      .stats i{
+            margin-right: 10px;
+      }
       
+
+
+      /* ------------------------------Mission------------------------------ */
       .missBox{
             padding: 10px 10px;
       }
@@ -55,7 +69,7 @@
             font-size: 20px;
       }
 
-      
+      /* ------------------------------Facility------------------------------ */
       .facilities h1{
             text-align: center;
             font-size: 30px;
@@ -71,11 +85,33 @@
             font-weight: 100;
       }
 
-      .Slider1{
-            height: 40vh;
-            overflow: hidden;
+      /* ------------------------------Events------------------------------ */
+      .events-section {
+            padding: 40px 15px;
       }
 
+      .section-header h2 {
+            font-size: 24px;
+      }
+
+      .section-header p {
+            font-size: 13px;
+            padding: 0 10px;
+      }
+
+      .event-card img {
+            height: 200px;
+      }
+
+      .event-overlay {
+            padding: 15px;
+      }
+
+      .event-overlay h5 {
+            font-size: 16px;
+      }
+
+      /* ------------------------------------ about ------------------------------------ */
       .aboutUs h1{
             font-size: 40px;
 
@@ -87,12 +123,42 @@
             line-height: 25px;
       }
 
-      .eventBox img {
-            max-height: 500px;
-            padding: 0 25px;
+
+      /* Admission CTA */
+      .admission-cta {
+            padding: 20px 15px;
+            border-radius: 25px;
+            margin: 10px 10px;
+            background: linear-gradient(135deg, #198754, #0f5132);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
       }
-      .eventPhotos h1{
-            font-size: 35px;
+
+      .admission-cta h2 {
+            font-size: 22px;
+            /* font-weight: 800; */
+            /* line-height: 1.4; */
+      }
+
+      .admission-cta p {
+            font-size: 12px;
+            margin-bottom: 20px;
+            opacity: 0.95;
+      }
+
+      .cta-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 50px;
+            font-weight: 700;
+            background: white;
+            color: #198754;
+            text-align: center;
+      }
+
+      .cta-btn:active {
+            transform: scale(0.97);
       }
 }
 

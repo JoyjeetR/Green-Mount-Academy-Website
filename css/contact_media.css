@@ -1,0 +1,173 @@
+/* ======================================================
+   MOBILE FIRST RESPONSIVE DESIGN
+====================================================== */
+
+/* ================= MOBILE (0–575px) ================= */
+@media (max-width: 575px) {
+
+    /* HERO */
+    .contact-hero {
+        padding: 70px 0;
+        text-align: center;
+    }
+
+    
+    #branchTabs {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start; /* important */
+        overflow-x: auto;
+        gap: 8px;
+        padding: 0 10px 8px 10px;
+        scroll-behavior: smooth;
+    }
+
+    #branchTabs::-webkit-scrollbar {
+        display: none;
+    }
+
+    #branchTabs .nav-item {
+        flex: 0 0 auto;
+    }
+
+    #branchTabs .nav-link {
+        white-space: nowrap;
+        font-size: 13px;
+        padding: 6px 14px;
+        border-radius: 20px;
+    }
+
+    #branchTabs button.active   {
+        background :var(--green)!important;
+        color: white !important ;
+    }
+
+    /* TAB CONTENT */
+    .tab-pane {
+        padding: 20px;
+    }
+
+    .map-frame {
+        height: 190px;
+    }
+
+    /* PRINCIPAL CARD */
+    .principal-card {
+        margin-bottom: 10px;
+        text-align: center;
+        padding: 15px 10px;
+
+    }
+
+    .principal-card img {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* CHAIRPERSON */
+    .chairman-card {
+        text-align: center;
+        padding: 25px 15px;
+    }
+
+    .chairman-image img {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 15px;
+    }
+
+    .chairperson-message {
+        font-size: 14px;
+    }
+
+    /* ENQUIRY SECTION */
+    .enquiry-section {
+        padding: 50px 0;
+    }
+
+    .enquiry-card {
+        padding: 25px 18px;
+        border-radius: 20px;
+    }
+
+    .enquiry-left {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    .enquiry-left h3 {
+        font-size: 20px;
+    }
+
+    .form-logo img {
+        width: 65px;
+    }
+
+    .modern-form .form-control,
+    .modern-form .form-select {
+        font-size: 13px;
+    }
+
+    .btn-submit {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    select {
+        max-height: 160px;
+    }
+}
+
+
+/* ================= TABLET (576px–991px) ================= */
+@media (min-width: 576px) and (max-width: 991px) {
+
+    .contact-hero {
+        padding: 85px 0;
+    }
+
+    .principal-card img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .map-frame {
+        height: 220px;
+    }
+
+    .enquiry-card {
+        padding: 35px 25px;
+    }
+
+    .enquiry-left {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .btn-submit {
+        width: 100%;
+    }
+}
+
+
+/* ================= SMALL DESKTOP (992px–1199px) ================= */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    .enquiry-card {
+        padding: 45px;
+    }
+
+    .map-frame {
+        height: 240px;
+    }
+}
+
+
+/* ================= LARGE DESKTOP (1200px+) ================= */
+@media (min-width: 1200px) {
+
+    .map-frame {
+        height: 250px;
+    }
+
+}

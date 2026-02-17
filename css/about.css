@@ -1,138 +1,398 @@
 :root{
-  --green:#0f6b3e;
-  --cream:#fbfbef;
+    --green:#0f6b3e;
+    --dark:#0b4d2c;
+    --cream:#f5f7f6;
+    --light:#ffffff;
+    --shadow:0 15px 40px rgba(0,0,0,.08);
 }
 
 body{
-  font-family:"Segoe UI", sans-serif;
-  background:var(--cream);
+    background:var(--cream);
+    color:#333;
 }
 
-/* HERO */
+/* ============================= */
+/* GLOBAL SECTION STRUCTURE */
+/* ============================= */
+
+.section-block{
+    padding:90px 0;
+    position:relative;
+}
+
+.section-light{
+    background:#f9f9f9;
+}
+
+.section-green{
+    background: #279a62;
+    color:#fff;
+}
+
+.section-block h2{
+    font-weight:700;
+    margin-bottom:40px;
+    position:relative;
+}
+
+.section-block h2::after{
+    content:"";
+    width:100%;
+    height:2px;
+    background:var(--green);
+    display:block;
+    margin-top:12px;
+}
+.section-title{
+    font-weight:700;
+    margin-bottom:30px;
+    position:relative;
+}
+
+.section-title::after{
+    content:"";
+    display:block;
+    width:50px;
+    height:3px;
+    background:var(--green);
+    margin:12px auto 0;
+    border-radius:3px;
+}
+
+
+/* ============================= */
+/* HERO SECTION */
+/* ============================= */
+
 .about-hero{
-  background:linear-gradient(rgba(15,107,62,.8),rgba(15,107,62,.8)),
-  url("../images/about-bg.jpg") center/cover;
-  color:#fff;
-  padding:100px 0;
+      background: linear-gradient(rgba(15,107,62,.85),rgba(15,107,62,.85)),
+    url("../img/banner.webp") center/cover no-repeat;
+    color:#fff;
+    padding:120px 0;
+    text-align:center;
 }
 
-/* MESSAGE */
-.message-section{
-  background:#fff;
+.about-hero h1{
+    font-size:52px;
+    font-weight:800;
+    letter-spacing:1px;
 }
 
-/* CARDS */
-.info-card{
-  background:#fff;
-  padding:30px;
-  border-radius:18px;
-  box-shadow:0 12px 30px rgba(0,0,0,.06);
+.about-hero p{
+    font-size:20px;
+    margin-top:20px;
+    opacity:.9;
 }
 
-.info-card i{
-  font-size:2rem;
-  color:var(--green);
+.hero-buttons{
+    margin-top:35px;
 }
 
-.quality-card{
-  background:#fff;
-  padding:25px;
-  border-radius:16px;
-  box-shadow:0 8px 20px rgba(0,0,0,.05);
-}
-
-.value-card{
-  background:#fff;
-  border-radius:50px;
-  box-shadow:0 12px 30px rgba(0,0,0,.06);
-  transition:all .35s ease;
-}
-
-.value-card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 18px 40px rgba(0,0,0,.1);
-}
-
-.value-toggle{
-      width: 100%;
-  background:none;
-  border:none;
-  font-weight:600;
-  margin-top:10px;
-  cursor:pointer;
-  transition:.3s ease;
-}
-
-.value-toggle:hover{
-      color:white;
-}
-
-.value-expand{
-  font-size:.9rem;
-  color:#ffffff;
+.hero-buttons .btn{
+    padding:12px 28px;
+    border-radius:40px;
+    margin:0 10px;
+    font-weight:600;
 }
 
 
-.about-cta{
-  background:var(--green);
-  color:#fff;
-  padding:70px 0;
+/* ============================= */
+/* LEGACY SECTION */
+/* ============================= */
+
+.legacy-img{
+    border-radius:20px;
+    box-shadow:var(--shadow);
 }
 
-/* SMOOTH TRANSITION GLOBAL */
-.card, .info-card, .quality-card, .value-card, .history-card {
-  transition: all .35s ease;
+/* ============================= */
+/* WHY CHOOSE US */
+/* ============================= */
+
+.modern-card{
+    background:#fff;
+    padding:40px 30px;
+    border-radius:18px;
+    box-shadow:var(--shadow);
+    text-align:center;
+    transition:.35s ease;
+    height:100%;
 }
 
-/* HOVER LIFT */
-.info-card:hover,
-.quality-card:hover,
-.history-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 45px rgba(0,0,0,.1);
+.modern-card i{
+    font-size:40px;
+    color:var(--green);
+    margin-bottom:20px;
 }
 
-/* VALUE CARD HOVER */
-.value-card:hover {
-  background: var(--green);
-  color: #fff;
-  transform: scale(1.05);
+.modern-card:hover{
+    transform:translateY(-10px);
 }
 
-/* ICON ANIMATION */
-.info-card i {
-  transition: transform .4s ease;
+/* ============================= */
+/* MISSION */
+/* ============================= */
+
+.mission-main{
+    font-size:18px;
+    max-width:750px;
+    margin:auto;
+    opacity:.9;
 }
 
-.info-card:hover i {
-  transform: rotate(10deg) scale(1.2);
+.mission-card{
+    background:#ffffff;
+    color:#333;
+    padding:40px 30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+    transition:.35s ease;
+    height:100%;
 }
 
-/* BUTTON HOVER */
-.btn {
-  transition: all .3s ease;
+.mission-card:hover{
+    transform:translateY(-8px);
 }
 
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(0,0,0,.2);
+.mission-card i{
+    font-size:40px;
+    color:var(--green);
+    margin-bottom:20px;
+}
+.mission-image img{
+    width:100%;
+    border-radius:25px;
+    box-shadow:0 20px 50px rgba(0,0,0,.25);
+    transition:.4s ease;
 }
 
-.branch-stat-card{
-  background:#fff;
-  padding:30px;
-  border-radius:20px;
-  box-shadow:0 12px 30px rgba(0,0,0,.06);
-  transition:.3s ease;
+.mission-image img:hover{
+    transform:scale(1.03);
 }
 
-.branch-stat-card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 20px 45px rgba(0,0,0,.1);
+
+/* ============================= */
+/* ADMISSION PROCESS */
+/* ============================= */
+
+.admission-box{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
 }
 
-.branch-stat-card h3{
-  color:var(--green);
-  font-weight:700;
+.step-item{
+    flex:1;
+    background:#fff;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:var(--shadow);
+    text-align:center;
+    font-weight:600;
+    transition:.3s ease;
 }
 
+.step-item:hover{
+    background:var(--green);
+    color:#fff;
+}
+
+/* ============================= */
+/* FACILITIES SECTION */
+/* ============================= */
+
+.facilities-section{
+    padding: 100px 0;
+    background: #f8fdfb;
+}
+
+.section-title{
+    font-size: 38px;
+    font-weight: 700;
+    color: #0f6b3e;
+}
+
+.section-subtitle{
+    max-width: 650px;
+    margin: 15px auto 0;
+    font-size: 15px;
+    color: #555;
+}
+
+/* CARD */
+.facility-card{
+    background: #ffffff;
+    padding: 35px 30px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+    transition: all 0.35s ease;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.facility-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.1);
+}
+
+/* ICON */
+.facility-icon{
+    width: 60px;
+    height: 60px;
+    background: rgba(15,107,62,0.1);
+    color: #0f6b3e;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 15px;
+    transition: 0.3s ease;
+}
+
+.facility-card:hover .facility-icon{
+    background: #0f6b3e;
+    color: white;
+}
+
+/* TITLE */
+.facility-card h5{
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* BUTTON */
+.facility-btn{
+    background: none;
+    border: none;
+    color: #0f6b3e;
+    font-weight: 600;
+    padding: 0;
+    margin-top: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: 0.3s ease;
+}
+
+.facility-btn:hover{
+    gap: 12px;
+    color: #095a32;
+}
+
+/* EXPAND */
+.facility-expand{
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eaeaea;
+    font-size: 14px;
+    color: #555;
+}
+
+.facility-expand ul{
+    padding-left: 18px;
+    margin-bottom: 10px;
+}
+
+.facility-expand li{
+    margin-bottom: 6px;
+}
+
+/* ============================= */
+/* MOBILE DESIGN */
+/* ============================= */
+
+@media(max-width:768px){
+
+
+}
+
+
+/* ============================= */
+/* LEADERSHIP SECTION */
+/* ============================= */
+
+.leadership-row{
+    margin-top:60px;
+}
+
+.profile-card{
+    background:#fff;
+    padding:50px 40px;
+    border-radius:20px;
+    box-shadow:var(--shadow);
+    text-align:center;
+    transition:.35s ease;
+    height:100%;
+}
+
+.profile-card:hover{
+    transform:translateY(-10px);
+}
+
+.profile-card img{
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:20px;
+    border:5px solid var(--green);
+}
+
+
+/* ============================= */
+/* SCHOOL HISTORY SECTION */
+/* ============================= */
+
+.history-image img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 20px 50px rgba(0,0,0,.12);
+    transition:.4s ease;
+}
+
+.history-image img:hover{
+    transform:scale(1.03);
+}
+
+.section-title{
+    font-weight:700;
+    margin-bottom:25px;
+    position:relative;
+}
+
+.section-title::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    width:50px;
+    height:3px;
+    background:var(--green);
+    border-radius:3px;
+}
+
+/* ============================= */
+/* CTA SECTION */
+/* ============================= */
+
+.cta-section{
+    background:var(--green);
+    padding:30px 0 0 0 ;
+    text-align:center;
+    color:#fff;
+}
+
+.cta-section h3{
+    font-size:28px;
+    font-weight:700;
+}
+
+.cta-section .btn{
+    margin-top:20px;
+    padding:12px 30px;
+    border-radius:40px;
+    font-weight:600;
+}

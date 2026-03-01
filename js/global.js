@@ -1,17 +1,91 @@
-// Preloader Hide After Page Load
+/**
+ * global.js — Shared behaviour for all main site pages (Home, About, Gallery, Branches, Contact).
+ * Handles: preloader show/hide, mobile menu preloader, link-click preloader, scroll-to-top/bottom button,
+ * lazy-loaded Google Maps on Contact branch tabs, and contact form success popup / submit-button state.
+ */
+// ---------------------------------------------------------------------------
+// Preloader: hide after page load and when returning from back/forward cache
+// ---------------------------------------------------------------------------
+function hidePreloader() {
+    const preloader = document.getElementById("preloader");
+    if (preloader) preloader.classList.add("hide");
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     const preloader = document.getElementById("preloader");
-
     if (preloader) {
-        setTimeout(() => {
-            preloader.classList.add("hide");
-        }, 300);
+        setTimeout(hidePreloader, 300);
     }
 });
 
+// When returning from another page (e.g. Back from student login), bfcache restores the page
+// without firing DOMContentLoaded again — so hide the preloader on pageshow if persisted
+window.addEventListener("pageshow", function (event) {
+    if (event.persisted) {
+        hidePreloader();
+    }
+});
 
+// Hide preloader when mobile side menu (offcanvas) is opened or closed
+document.addEventListener("DOMContentLoaded", function () {
+    const sideMenu = document.getElementById("right_nav");
+    if (sideMenu) {
+        sideMenu.addEventListener("shown.bs.offcanvas", hidePreloader);
+        sideMenu.addEventListener("hidden.bs.offcanvas", hidePreloader);
+    }
+});
 
-//----------------------------------------Lazy load map iframes in tabs----------------------------------------
+// Show preloader on <a> or <button> click (instant navigation)
+document.addEventListener("DOMContentLoaded", function() {
+    const preloader = document.getElementById("preloader");
+
+    // Delegate click events for <a> and <button>
+    document.body.addEventListener("click", function(e) {
+        let target = e.target;
+
+        // Don't show preloader when opening or closing mobile side menu (toggler, offcanvas trigger, close button)
+        if (
+            target.closest(".navbar-toggler") ||
+            target.closest("[data-bs-toggle='offcanvas']") ||
+            target.closest(".btn-close[data-bs-dismiss='offcanvas']") ||
+            target.closest(".offcanvas-backdrop")
+        ) {
+            return;
+        }
+
+        // Traverse up in case there's an icon or inner span clicked inside <a> or <button>
+        while (target && target !== document.body) {
+            if (target.tagName === "A") {
+                const href = target.getAttribute("href");
+                // Ignore links that open in new tab/window, or anchor same-page, or have no meaningful href
+                if (
+                    href &&
+                    !href.startsWith("javascript:") &&
+                    !href.startsWith("#") &&
+                    !target.target // Don't show preloader on target="_blank"
+                ) {
+                    if (preloader) {
+                        preloader.classList.remove("hide");
+                    }
+                    // Let navigation happen naturally
+                }
+                break;
+            }
+            if (target.tagName === "BUTTON" && !target.type?.toLowerCase().includes("submit")) {
+                // If type is submit, ignore (for forms)
+                if (preloader) {
+                    preloader.classList.remove("hide");
+                }
+                break;
+            }
+            target = target.parentElement;
+        }
+    }, true);
+});
+
+// ---------------------------------------------------------------------------
+// Contact page: inject map iframe when a branch tab is shown (legacy handler)
+// ---------------------------------------------------------------------------
 document.addEventListener("shown.bs.tab", function (event) {
 
     const targetId = event.target.getAttribute("data-bs-target");
@@ -33,7 +107,9 @@ document.addEventListener("shown.bs.tab", function (event) {
 });
 
 
-// ----------------------------------------Quick scroll button to top and bottom----------------------------------------
+// ---------------------------------------------------------------------------
+// Smart scroll button: floating button shows scroll progress; click scrolls to bottom or top
+// ---------------------------------------------------------------------------
 document.addEventListener("DOMContentLoaded", () => {
 
     const wrapper = document.getElementById("smartScrollWrapper");
@@ -122,7 +198,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-// -------------------------------- Lazy Load Maps (Clean Version) --------------------------------
+// ---------------------------------------------------------------------------
+// Contact page: load Google Map iframe only when its branch tab becomes active (saves bandwidth)
+// ---------------------------------------------------------------------------
 document.addEventListener("DOMContentLoaded", function () {
 
     function loadMap(iframe) {
@@ -150,7 +228,9 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// Success popup after form submission
+// ---------------------------------------------------------------------------
+// Contact page: success popup and enquiry form submit-button state
+// ---------------------------------------------------------------------------
 function showSuccessPopup() {
     const popup = document.getElementById("successPopup");
     if (popup) popup.classList.add("show");
@@ -164,7 +244,7 @@ function closeSuccessPopup() {
 
 
 
-// Prevent Summit Button spam of enquiry form by disabling it after first click until the form is processed
+// Disable enquiry submit button and show "Submitting..." to prevent double submissions
 document.querySelector("#enquiryForm")?.addEventListener("submit", function () {
     const enquiryBtn = document.getElementById("submitEnquiryBtn");
     enquiryBtn.disabled = true;

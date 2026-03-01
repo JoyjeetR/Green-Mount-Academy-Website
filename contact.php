@@ -1,43 +1,40 @@
 <!DOCTYPE html>
 <?php
-if(isset($_POST['submit_enquiry'])) {
+/**
+ * Contact page: handles admission enquiry form submission.
+ * On POST: sanitize inputs, insert into enquiry table, redirect to contact.php?success=1 (shows success popup).
+ */
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    require_once("sql_connect.php");
 
-      $guardian_name   = htmlspecialchars($_POST['guardian_name']);
-      $phone           = htmlspecialchars($_POST['phone']);
-      $student_name    = htmlspecialchars($_POST['student_name']);
-      $class_applying  = htmlspecialchars($_POST['class_applying']);
-      $email           = htmlspecialchars($_POST['email']);
-      $branch          = htmlspecialchars($_POST['branch']);
-      $message         = htmlspecialchars($_POST['message']);
+    try {
+        $guardian_name   = htmlspecialchars($_POST['guardian_name']);
+        $phone           = htmlspecialchars($_POST['phone']);
+        $student_name    = htmlspecialchars($_POST['student_name']);
+        $class_applying  = htmlspecialchars($_POST['class_applying']);
+        $email           = htmlspecialchars($_POST['email']);
+        $branch          = htmlspecialchars($_POST['branch']);
+        $message         = htmlspecialchars($_POST['message']);
+        $status         = 'unseen';
 
-      try {
-            require_once('sql_connect.php');
+        $stmt = $pdo->prepare("INSERT INTO enquiry 
+            (guardianName, studentName, classApplying, phone, email, branch, message, status) 
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt->execute([$guardian_name, $student_name, $class_applying, $phone, $email, $branch, $message, $status]);
 
-            $query = "INSERT INTO enquiry 
-            (guardianName, studentName, classApplying, phone, email, branch, message) 
-            VALUES (?, ?, ?, ?, ?, ?, ?)";
-
-            $stmt = $pdo->prepare($query);
-            $stmt->execute([
-                  $guardian_name,$student_name,$class_applying,$phone,$email,$branch,$message ]);
-
-            $pdo = NULL;
-            $stmt = NULL;
-
-            header("Location: contact.php?success=1");
-            exit();
-
-      } catch(PDOException $e) {
-            echo "<script>alert('Error submitting enquiry');</script>";
-      }
+        header("Location: contact.php?success=1");
+        exit();
+    } catch (PDOException $e) {
+        die("ERROR: " . $e->getMessage());
+    }
 }
 ?>
+<!-- Contact page: hero, chairperson card, branch tabs with maps, admission enquiry form, footer -->
 <html lang="en">
-
 <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Document</title>
+      <title>G.M.A - Contact</title>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
       <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -49,31 +46,27 @@ if(isset($_POST['submit_enquiry'])) {
 </head>
 
 <body>
-      <!-- Preloader -->
+      <!-- Preloader: hidden by global.js after load -->
       <div id="preloader">
             <div class="loader"></div>
       </div>
 
-      <header class="position-sticky top-0">
+      <header class="top-0">
             <!-- This is a collapsable header is collapse in sm and low screens -->
             <nav class="navbar navbar-expand-lg py-2 fullNav">
                   <div class="container-fluid  px-4">
                         <!-- This is the logo pic and the name of school -->
-                        <a class="navbar-brand navLogo d-flex align-items-center " href="index.html">
+                        <a class="navbar-brand navLogo d-flex align-items-center p-0" href="index.html">
                               <div class="row">
                                     <div class="col-2">
                                           <img src="img/gmaLogo.PNG" alt="" class="img-fluid">
                                     </div>
                                     <div class="col-10">
                                           <h2>+2 Green Mount Academy</h2>
+                                          <p class="m-0">An english medium school CBSE Curriculum, New Delhi</p>
                                     </div>
                               </div>
                         </a>
-                        <!-- Toggle button for the collapsed links -->
-                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                              data-bs-target="#right_nav" aria-controls="offcanvasScrolling">
-                              <span class="navbar-toggler-icon"></span>
-                        </button>
                         <div class="collapse navbar-collapse navButn justify-content-end">
                               <!-- links for the non collapsed screen -->
                               <div class="navbar-nav">
@@ -82,38 +75,49 @@ if(isset($_POST['submit_enquiry'])) {
                                     <a class="nav-link px-4 " href="branches.html">Branches</a>
                                     <a class="nav-link px-4 active" href="contact.php">Contact</a>
                                     <a class="nav-link px-4 " href="about.html">About</a>
+                                    <a href="student/login.php" class="student-login-btn ms-3">
+                                          <i class="bi bi-person-circle"></i> Student Login
+                                    </a>
                               </div>
                         </div>
+                        <!-- Toggle button for the collapsed links -->
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                              data-bs-target="#right_nav" aria-controls="offcanvasScrolling">
+                              <span class="navbar-toggler-icon"></span>
+                        </button>
                   </div>
             </nav>
             <!-- The collapsed menu for the header comes out from the right -->
-            <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
-                  id="right_nav">
-                  <div class="offcanvas-header navLogo " style="background-color:#79d199">
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="right_nav">
+                  <div class="offcanvas-header navLogo ">
                         <div class="row">
-                              <div class="col-2">
-                                    <img src="img/gmaLogo.webp" alt="" class="img-fluid">
+                              <div class="col-3">
+                                    <img src="img/gmaLogo.PNG" alt="" class="img-fluid">
                               </div>
-                              <div class="col-10">
+                              <div class="col-9">
                                     <h2>+2 Green Mount Academy</h2>
-                                    <p class="m-0">An english medium school CBSE Curriculum, New Delhi</p>
                               </div>
                         </div>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                   </div>
                   <div class="offcanvas-body">
                         <div class="navbar-nav">
-                              <a class="nav-link px-4  " aria-current="page" href="index.html">Home</a>
+                              <a class="nav-link px-4 " href="index.html">Home</a>
                               <a class="nav-link px-4 " href="gallery.html">Gallery</a>
                               <a class="nav-link px-4 " href="branches.html">Branches</a>
                               <a class="nav-link px-4 active" href="contact.php">Contact</a>
                               <a class="nav-link px-4 " href="about.html">About</a>
                         </div>
+                        <div class="mobile-login-wrapper mt-3 px-3">
+                              <a href="student/login.php" class="mobile-student-login-btn">
+                                    <i class="bi bi-person-circle"></i> Student Login
+                              </a>
+                        </div>
                   </div>
             </div>
       </header>
       <main>
-            <!-- HERO -->
+            <!-- Hero: Contact Us heading and short intro -->
             <section class="contact-hero text-center">
                   <div class="container">
                         <h1>CONTACT US</h1>
@@ -121,7 +125,7 @@ if(isset($_POST['submit_enquiry'])) {
                   </div>
             </section>
 
-            <!-- CHAIRPERSON SECTION -->
+            <!-- Chairperson: photo, name, message, and contact details -->
             <section class="py-5 chairman-section">
                   <div class="container">
                         <div class="chairman-card row align-items-center">
@@ -159,7 +163,7 @@ if(isset($_POST['submit_enquiry'])) {
             </section>
 
 
-            <!-- BRANCHES WITH MAP -->
+            <!-- Branch tabs: pill nav to switch between branches; each tab has principal card + map (lazy-loaded by global.js) -->
             <section class="py-5 container-fluid" style="background-color: white;">
                   <div class="container branchContact">
                         <h2 class="text-center mb-3">Our Branch Contacts</h2>
@@ -511,7 +515,7 @@ if(isset($_POST['submit_enquiry'])) {
                   </div>
             </section>
 
-            <!--  ENQUIRY SECTION -->
+            <!-- Admission enquiry form: POSTs to this page; success shows popup via ?success=1 -->
             <section class="enquiry-section py-5" id="AddEnquiry">
                   <div class="container">
                         <div class="row justify-content-center">
@@ -558,12 +562,12 @@ if(isset($_POST['submit_enquiry'])) {
                                                                   <div class="col-md-6">
                                                                         <div class="form-floating">
                                                                               <input type="tel" class="form-control"
-                                                                                    placeholder="Phone Number" required name="phone">
+                                                                                    placeholder="Phone Number" required name="phone" maxlength="10">
                                                                               <label>Phone Number</label>
                                                                         </div>
                                                                   </div>
 
-                                                                  <!-- Student Name -->
+                                                                  <!-- Student Name -->	
                                                                   <div class="col-md-6">
                                                                         <div class="form-floating">
                                                                               <input type="text" class="form-control"
@@ -826,8 +830,10 @@ if(isset($_POST['submit_enquiry'])) {
             </div>
       </div>
 
-      <!-- To Open the succuss popup -->
-<?php if(isset($_GET['success']) && $_GET['success'] == 1): ?>
+      <!-- To Open the succuss popup-->
+
+<?php 
+    if(isset($_GET['success']) && $_GET['success'] == 1): ?>
       <script>
             document.addEventListener("DOMContentLoaded", function() {
             const successPopup = document.getElementById("successPopup");

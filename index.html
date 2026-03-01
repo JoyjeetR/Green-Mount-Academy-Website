@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<!--
+  Home page — Green Mount Academy.
+  Sections: hero banner, stats strip, mission, facilities, events, about, branches preview, admission CTA, mobile quick actions, footer.
+-->
 <html lang="en">
 
 <head>
@@ -18,13 +22,13 @@
 </head>
 
 <body>
-      <!-- Preloader -->
+      <!-- Preloader: full-screen loader hidden by global.js after page load -->
       <div id="preloader">
             <div class="loader"></div>
       </div>
 
+      <!-- Sticky header: desktop nav links + mobile offcanvas menu (id="right_nav") -->
       <header class="top-0">
-            <!-- This is a collapsable header is collapse in sm and low screens -->
             <nav class="navbar navbar-expand-lg py-2 fullNav">
                   <div class="container-fluid  px-4">
                         <!-- This is the logo pic and the name of school -->
@@ -47,6 +51,9 @@
                                     <a class="nav-link px-4 " href="branches.html">Branches</a>
                                     <a class="nav-link px-4 " href="contact.php">Contact</a>
                                     <a class="nav-link px-4 " href="about.html">About</a>
+                                    <a href="student/login.php" class="student-login-btn ms-3">
+                                          <i class="bi bi-person-circle"></i> Student Login
+                                    </a>
                               </div>
                         </div>
                         <!-- Toggle button for the collapsed links -->
@@ -77,11 +84,16 @@
                               <a class="nav-link px-4 " href="contact.php">Contact</a>
                               <a class="nav-link px-4 " href="about.html">About</a>
                         </div>
+                        <div class="mobile-login-wrapper mt-3 px-3">
+                              <a href="student/login.php" class="mobile-student-login-btn">
+                                    <i class="bi bi-person-circle"></i> Student Login
+                              </a>
+                        </div>
                   </div>
             </div>
       </header>
       <main>
-            <!-- Logo inside the main photo -->
+            <!-- Hero / banner: school logo, name, founding year, Contact Us / About Us buttons -->
             <section class=" container-fluid p-4 bannerLogo">
                   <div class="row text-center ">
                         <div class="col-12">
@@ -98,7 +110,7 @@
                         </div>
                   </div>
             </section>
-            <!-- Status row -->
+            <!-- Stats strip: Students, Teachers, Campuses, Years — each links to relevant section or page -->
             <section class="container-fluid stats text-center">
                   <div class="container">
                         <div class="row g-4">
@@ -126,7 +138,7 @@
                         </div>
                   </div>
             </section>
-            <!-- This is mission section it has three partition for lg> screens, two partition for sm> -->
+            <!-- Mission: three cards — Quality Education, Safe Environment, Holistic Growth -->
             <section class=" container-fluid py-sm-4  py-3  ourMission" id="mission">
                   <div class="container">
                         <div class="row">
@@ -195,7 +207,7 @@
                         </div>
                   </div>
             </section>
-            <!-- Facilities section divided into two partition  for sm> screens-->
+            <!-- Facilities: Hostel, Playground, Classes Pre-Nursery to XII -->
             <section class="container-fluid facilities py-sm-5 py-3 " id="faci">
                   <div class="container">
                         <div class="row gy-4">
@@ -256,7 +268,7 @@
                         </div>
                   </div>
             </section>
-            <!-- event photo section divided into 4 partition for lg> screens, 2 partition for sm> screens -->
+            <!-- Recent events: image cards (Science Exhibition, Annual Function, Sports, Republic Day) -->
             <section class="events-section py-5" id="event">
                   <div class="container">
 
@@ -312,7 +324,7 @@
                   </div>
             </section>
 
-            <!-- About section  -->
+            <!-- About Us: short history and school overview -->
             <section class="container-fluid aboutUs py-sm-5 py-3 " id="about">
                   <div class="container">
                         <div class="row">
@@ -336,7 +348,7 @@
                         </div>
                   </div>
             </section>
-            <!-- Branch Overview -->
+            <!-- Branch overview: four branch cards with "View Details" linking to branches.html -->
             <section class="branches-section py-5">
                   <div class="container">
                         <h2 class="text-center mb-5">Our Branches</h2>
@@ -345,8 +357,7 @@
 
                               <!-- Branch 1 -->
                               <div class="col-lg-3 col-md-6">
-                                    <div class="branch-card"
-                                          style="background-image: url('img/branch/branch1.jpeg');">
+                                    <div class="branch-card" style="background-image: url('img/branch/branch1.jpeg');">
                                           <div class="branch-overlay">
                                                 <h5>Jail Road</h5>
                                                 <p>Dumka</p>
@@ -357,8 +368,7 @@
 
                               <!-- Branch 2 -->
                               <div class="col-lg-3 col-md-6">
-                                    <div class="branch-card"
-                                          style="background-image: url('img/branch/branch2.jpeg');">
+                                    <div class="branch-card" style="background-image: url('img/branch/branch2.jpeg');">
                                           <div class="branch-overlay">
                                                 <h5>Baxi Bandh</h5>
                                                 <p>Dumka</p>
@@ -369,8 +379,7 @@
 
                               <!-- Branch 3 -->
                               <div class="col-lg-3 col-md-6">
-                                    <div class="branch-card"
-                                          style="background-image: url('img/branch/branch3.webp');">
+                                    <div class="branch-card" style="background-image: url('img/branch/branch3.webp');">
                                           <div class="branch-overlay">
                                                 <h5>Jama</h5>
                                                 <p>Sejokora</p>
@@ -381,8 +390,7 @@
 
                               <!-- Branch 4 -->
                               <div class="col-lg-3 col-md-6">
-                                    <div class="branch-card"
-                                          style="background-image: url('img/branch/branch6.jpeg')">
+                                    <div class="branch-card" style="background-image: url('img/branch/branch6.jpeg')">
                                           <div class="branch-overlay">
                                                 <h5>First Step</h5>
                                                 <p>Rashikpur</p>
@@ -396,7 +404,7 @@
             </section>
 
 
-            <!-- Admission  CTA-->
+            <!-- Admission CTA: Apply Now / Schedule Visit for 2026–27 -->
             <section class="admission-cta text-center">
                   <div class="container">
                         <h2>Admissions Open 2026–27</h2>
@@ -409,7 +417,7 @@
                   </div>
             </section>
 
-            <!-- Floating Quick Action Bar (Mobile Only) -->
+            <!-- Mobile-only quick bar: Call, Apply, Branches -->
             <div class="quick-action-bar row text-center">
                   <div class="col-4">
                         <a href="tel:+919431549204" class="action-btn call-btn">
@@ -434,6 +442,7 @@
 
 
       </main>
+      <!-- Footer: about links, branches, gallery sections, contact + social; mobile accordion nav -->
       <footer class="main-footer">
             <div class="container">
                   <div class="row g-5 footer-top">
@@ -577,7 +586,7 @@
             </div>
 
       </footer>
-      <!-- Smart Scroll Button -->
+      <!-- Smart scroll: floating button to jump to top or bottom (see global.js) -->
       <div id="smartScrollWrapper">
             <svg class="progress-ring" width="54" height="54">
                   <circle class="progress-ring__circle" stroke-width="3" fill="transparent" r="24" cx="27" cy="27" />

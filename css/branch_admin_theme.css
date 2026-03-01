@@ -1,0 +1,333 @@
+/* =========================================
+   Branch Admin Theme – Premium Green
+   Usage:
+   - In your PHP/HTML head:
+       <link rel="stylesheet" href="../css/branch_admin_theme.css">
+   - On pages that should use this theme:
+       <body class="branch-theme">
+========================================= */
+
+/* ---------- Color tokens ---------- */
+body.branch-theme {
+    --branch-green-bg: #ecfdf5;
+    --branch-green-dark: #064e3b;
+    --branch-green-mid: #059669;
+    --branch-green-light: #22c55e;
+    --branch-surface: #ffffff;
+
+    --branch-text-main: #022c22;
+    --branch-text-muted: #6b7280;
+
+    --branch-shadow-soft: 0 4px 20px rgba(5, 150, 105, 0.15);
+    --branch-shadow-strong: 0 20px 60px rgba(5, 150, 105, 0.35);
+}
+
+/* ---------- Page background ---------- */
+body.branch-theme {
+    background: radial-gradient(circle at top left, #bbf7d0 0, #ecfdf5 45%, #e5f3ff 100%);
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--branch-text-main);
+}
+
+/* ---------- Shared containers/cards ---------- */
+.branch-theme .card-surface,
+.branch-theme .dashboard-card,
+.branch-theme .enquiry-card {
+    background: var(--branch-surface);
+    border-radius: 18px;
+    box-shadow: var(--branch-shadow-soft);
+    border: 1px solid rgba(15, 118, 110, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.branch-theme .card-surface:hover,
+.branch-theme .dashboard-card:hover,
+.branch-theme .enquiry-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--branch-shadow-strong);
+}
+
+/* ---------- Sidebar ---------- */
+.branch-theme .sidebar {
+    background: linear-gradient(160deg, #022c22, #064e3b);
+    color: #f9fafb;
+    box-shadow: 4px 0 24px rgba(15, 23, 42, 0.25);
+}
+
+.branch-theme .sidebar .logo h3 {
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
+
+.branch-theme .sidebar span {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.branch-theme .sidebar a {
+    color: #e5e7eb;
+    border-radius: 999px;
+    margin: 4px 16px;
+    padding: 10px 18px;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+
+.branch-theme .sidebar a:hover {
+    background: rgba(34, 197, 94, 0.18);
+    color: #f9fafb;
+    transform: translateX(2px);
+}
+
+.branch-theme .sidebar a.active {
+    background: linear-gradient(135deg, var(--branch-green-mid), var(--branch-green-light));
+    color: #ecfdf5;
+    font-weight: 600;
+}
+
+/* ---------- Topbar ---------- */
+.branch-theme .topbar {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 14px;
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
+    backdrop-filter: blur(10px);
+}
+
+.branch-theme .topbar .admin-name {
+    color: var(--branch-text-main);
+}
+
+/* ---------- Buttons ---------- */
+.branch-theme .btn-success,
+.branch-theme .btn-primary,
+.branch-theme .btn-login {
+    background: linear-gradient(135deg, var(--branch-green-mid), var(--branch-green-light));
+    border-color: var(--branch-green-mid);
+    color: #ecfdf5;
+    font-weight: 600;
+    box-shadow: 0 10px 30px rgba(5, 150, 105, 0.4);
+}
+
+.branch-theme .btn-success:hover,
+.branch-theme .btn-primary:hover,
+.branch-theme .btn-login:hover {
+    background: linear-gradient(135deg, #047857, var(--branch-green-light));
+    border-color: #047857;
+    transform: translateY(-1px);
+}
+
+/* Outline / subtle buttons */
+.branch-theme .btn-outline-success {
+    border-color: var(--branch-green-mid);
+    color: var(--branch-green-mid);
+}
+
+.branch-theme .btn-outline-success:hover {
+    background: rgba(34, 197, 94, 0.08);
+    color: #022c22;
+}
+
+/* ---------- Forms (inputs & selects) ---------- */
+.branch-theme .form-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--branch-text-muted);
+}
+
+.branch-theme .form-control,
+.branch-theme .form-select {
+    border-radius: 12px;
+    border: 1.5px solid rgba(148, 163, 184, 0.6);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px 14px;
+    font-size: 0.9rem;
+    transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.branch-theme .form-control:focus,
+.branch-theme .form-select:focus {
+    border-color: var(--branch-green-mid);
+    box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.25);
+    background: #ffffff;
+    outline: none;
+}
+
+/* Input group icons */
+.branch-theme .input-group-text {
+    background: #ecfdf5;
+    border-radius: 12px 0 0 12px !important;
+    border-color: rgba(148, 163, 184, 0.6);
+    color: var(--branch-green-mid);
+}
+
+/* Password eye toggle */
+.branch-theme .toggle-eye {
+    background: #f1f5f9;
+    border-radius: 0 12px 12px 0 !important;
+    border-color: rgba(148, 163, 184, 0.6);
+    color: var(--branch-text-muted);
+}
+
+/* ---------- Enquiry / info chips ---------- */
+.branch-theme .search-results-count {
+    background: #ecfdf5;
+    border-left: 4px solid var(--branch-green-light);
+    box-shadow: 0 3px 14px rgba(5, 150, 105, 0.18);
+    color: var(--branch-text-main);
+}
+
+.branch-theme .search-results-count i {
+    color: var(--branch-green-mid);
+}
+
+/* Empty-state card */
+.branch-theme .no-enquiries {
+    background: #f0fdf4;
+    border-color: #bbf7d0;
+    box-shadow: 0 6px 28px rgba(5, 150, 105, 0.15);
+}
+
+.branch-theme .no-enquiries-icon {
+    background: #dcfce7;
+    color: #047857;
+}
+
+/* Message highlight */
+.branch-theme .message-box {
+    border-left-color: var(--branch-green-mid);
+}
+
+/* ---------- Branch admin tooltip in top-right ---------- */
+.branch-theme .branch-admin-info {
+    position: relative;
+    display: inline-block;
+}
+
+.branch-theme .branch-admin-tooltip {
+    position: absolute;
+    right: 0;
+    top: 120%;
+    min-width: 220px;
+    padding: 12px 14px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 14px 40px rgba(15, 23, 42, 0.25);
+    border: 1px solid rgba(148, 163, 184, 0.3);
+    font-size: 0.85rem;
+    color: var(--branch-text-main);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(4px);
+    transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s ease;
+    z-index: 20;
+}
+
+.branch-theme .branch-admin-tooltip strong {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.branch-theme .branch-admin-info:hover .branch-admin-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* ---------- Add Student form card ---------- */
+.branch-theme .add-student-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 22px;
+    box-shadow: 0 22px 60px rgba(5, 150, 105, 0.35);
+    background: radial-gradient(circle at top left, #ecfdf5 0, #ffffff 40%, #e0f2fe 100%);
+    border: 1px solid rgba(148, 163, 184, 0.35);
+}
+
+.branch-theme .add-student-card::before {
+    content: '';
+    position: absolute;
+    inset: -40%;
+    background: radial-gradient(circle at top right, rgba(34, 197, 94, 0.18), transparent 60%);
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+.branch-theme .add-student-card h4 {
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--branch-green-dark);
+}
+
+.branch-theme .add-student-card .form-label {
+    font-weight: 600;
+}
+
+.branch-theme .add-student-card .form-control,
+.branch-theme .add-student-card .form-select {
+    background: rgba(255, 255, 255, 0.92);
+}
+
+/* ---------- Date of birth picker ---------- */
+.branch-theme .dob-picker .input-group-text {
+    background: #ecfdf5;
+    border-color: rgba(148, 163, 184, 0.6);
+    color: var(--branch-green-mid);
+}
+
+.branch-theme .dob-picker .dob-input {
+    cursor: pointer;
+}
+
+.branch-theme .dob-picker .dob-input::-webkit-calendar-picker-indicator {
+    opacity: 0.7;
+    filter: hue-rotate(-10deg) saturate(1.2);
+}
+
+/* ---------- Flatpickr calendar theme (DOB) ---------- */
+.branch-theme .flatpickr-calendar {
+    border-radius: 16px;
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    box-shadow: 0 18px 60px rgba(5, 150, 105, 0.22);
+    overflow: hidden;
+    font-family: inherit;
+}
+
+.branch-theme .flatpickr-months {
+    background: linear-gradient(135deg, var(--branch-green-mid), var(--branch-green-light));
+    color: #ecfdf5;
+}
+
+.branch-theme .flatpickr-current-month,
+.branch-theme .flatpickr-weekday {
+    color: #ecfdf5;
+}
+
+.branch-theme .flatpickr-day.today {
+    border-color: var(--branch-green-mid);
+}
+
+.branch-theme .flatpickr-day.selected,
+.branch-theme .flatpickr-day.selected:hover {
+    background: var(--branch-green-mid);
+    border-color: var(--branch-green-mid);
+    color: #ecfdf5;
+}
+
+.branch-theme .flatpickr-day:hover {
+    background: rgba(34, 197, 94, 0.12);
+    border-color: rgba(34, 197, 94, 0.12);
+}
+
+/* ---------- Responsive tweaks (mobile) ---------- */
+@media (max-width: 768px) {
+    body.branch-theme {
+        background: linear-gradient(180deg, #ecfdf5, #e0f2fe);
+    }
+
+    .branch-theme .sidebar {
+        box-shadow: 6px 0 30px rgba(15, 23, 42, 0.35);
+    }
+}
+

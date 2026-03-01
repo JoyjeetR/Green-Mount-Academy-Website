@@ -1,0 +1,305 @@
+/* =============================
+   ENQUIRY CARD DESIGN
+============================= */
+
+.enquiry-card{
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.05);
+    padding: 20px;
+    transition: .3s ease;
+}
+
+.enquiry-card:hover{
+    transform: translateY(-4px);
+}
+
+/* Header */
+.enquiry-header{
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.enquiry-header h6{
+    font-weight: 600;
+}
+
+/* Body */
+.enquiry-body p{
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.message-box{
+    background: #f8f9fa;
+    padding: 12px;
+    border-radius: 10px;
+    border-left: 4px solid #0f6b3e;
+}
+
+/* Footer */
+.enquiry-footer{
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+/* =============================
+   NO ENQUIRIES EMPTY STATE
+============================= */
+
+.no-enquiries {
+    width: 100%;
+    max-width: 420px;
+    margin: 3rem auto;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    background: #f8faf9;
+    border-radius: 16px;
+    border: 1px dashed #c5d9d0;
+    box-shadow: 0 4px 20px rgba(15, 107, 62, 0.06);
+}
+
+.no-enquiries-icon {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e8f3ef;
+    border-radius: 50%;
+    color: #0f6b3e;
+    font-size: 2rem;
+}
+
+.no-enquiries-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1a3d2e;
+    margin-bottom: 0.5rem;
+}
+
+.no-enquiries-text {
+    font-size: 0.9375rem;
+    color: #5a6b63;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* =============================
+   SEARCH RESULTS COUNT
+============================= */
+
+.search-results-count {
+    background: #e8f3ef;
+    border-left: 4px solid #0f6b3e;
+    padding: 12px 10px;
+    border-radius: 8px;
+    margin-bottom: 0;
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.9375rem;
+    color: #1a3d2e;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(15, 107, 62, 0.08);
+}
+
+.search-results-count i {
+    color: #0f6b3e;
+    font-size: 1.1rem;
+}
+
+/* =============================
+   MOBILE RESPONSIVE STYLES
+============================= */
+
+@media(max-width:768px){
+    /* Enquiry Card */
+    .enquiry-card{
+        padding: 15px;
+        border-radius: 12px;
+    }
+    
+    /* Header */
+    .enquiry-header{
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 10px;
+        padding-bottom: 12px;
+    }
+    
+    .enquiry-header h6{
+        font-size: 15px;
+    }
+    
+    .enquiry-header small{
+        font-size: 12px;
+    }
+    
+    /* Body */
+    .enquiry-body{
+        margin-top: 10px;
+    }
+    
+    .enquiry-body .row{
+        margin: 0;
+    }
+    
+    .enquiry-body p{
+        font-size: 13px;
+        margin-bottom: 8px;
+        word-break: break-word;
+    }
+    
+    .enquiry-body .col-lg-4,
+    .enquiry-body .col-md-6{
+        margin-bottom: 10px;
+    }
+    
+    /* Message Box */
+    .message-box{
+        padding: 10px;
+        font-size: 13px;
+    }
+    
+    /* Footer */
+    .enquiry-footer{
+        flex-direction: column !important;
+        gap: 10px !important;
+        padding-top: 12px;
+    }
+    
+    .enquiry-footer .btn{
+        width: 100% !important;
+        font-size: 13px;
+        padding: 8px 12px;
+        margin: 0 !important;
+        flex: none !important;
+    }
+    
+    /* Search Results Count */
+    .search-results-count{
+        width: 100%;
+        padding: 10px 15px;
+        font-size: 0.875rem;
+        margin-bottom: 1rem;
+    }
+    
+    .search-results-count i{
+        font-size: 1rem;
+    }
+    
+    /* No Enquiries */
+    .no-enquiries{
+        max-width: 100%;
+        margin: 2rem auto;
+        padding: 2rem 1.25rem;
+    }
+    
+    .no-enquiries-icon{
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    .no-enquiries-title{
+        font-size: 1.1rem;
+    }
+    
+    .no-enquiries-text{
+        font-size: 0.875rem;
+    }
+}
+
+@media(max-width:576px){
+    /* Enquiry Card */
+    .enquiry-card{
+        padding: 12px;
+        border-radius: 10px;
+    }
+    
+    /* Header */
+    .enquiry-header{
+        padding-bottom: 10px;
+        margin-bottom: 12px;
+    }
+    
+    .enquiry-header h6{
+        font-size: 14px;
+    }
+    
+    .enquiry-header small{
+        font-size: 11px;
+    }
+    
+    /* Body */
+    .enquiry-body p{
+        font-size: 12px;
+        margin-bottom: 6px;
+    }
+    
+    .enquiry-body .col-lg-4,
+    .enquiry-body .col-md-6{
+        margin-bottom: 8px;
+    }
+    
+    /* Message Box */
+    .message-box{
+        padding: 8px;
+        font-size: 12px;
+        border-radius: 8px;
+    }
+    
+    /* Footer */
+    .enquiry-footer{
+        padding-top: 10px;
+        margin-top: 12px;
+        flex-direction: column !important;
+        gap: 8px !important;
+    }
+    
+    .enquiry-footer .btn{
+        width: 100% !important;
+        font-size: 12px;
+        padding: 7px 10px;
+        margin: 0 !important;
+        flex: none !important;
+    }
+    
+    .enquiry-footer .btn i{
+        font-size: 14px;
+    }
+    
+    /* Search Results Count */
+    .search-results-count{
+        padding: 8px 12px;
+        font-size: 0.8125rem;
+    }
+    
+    .search-results-count i{
+        font-size: 0.9rem;
+    }
+    
+    /* No Enquiries */
+    .no-enquiries{
+        margin: 1.5rem auto;
+        padding: 1.5rem 1rem;
+        border-radius: 12px;
+    }
+    
+    .no-enquiries-icon{
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
+    
+    .no-enquiries-title{
+        font-size: 1rem;
+    }
+    
+    .no-enquiries-text{
+        font-size: 0.8125rem;
+    }
+}

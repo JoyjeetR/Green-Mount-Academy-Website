@@ -1,21 +1,28 @@
+/**
+ * gallery.js — Gallery page behaviour.
+ * - Image lightbox: click any gallery image to open it in a Bootstrap modal.
+ * - Quick links: highlight the current section in the nav as user scrolls.
+ * - Scroll animation: add .show to elements when they enter the viewport.
+ */
 
-
-// Creating a image previewer for all the images using only one bootstrap modal 
-let images = document.querySelectorAll(".openModal") // Selecting all the images 
+// ---------------------------------------------------------------------------
+// Image preview / lightbox: one modal for all images with class .openModal
+// ---------------------------------------------------------------------------
+let images = document.querySelectorAll(".openModal");
 
 images.forEach((img) => {
     img.addEventListener("click", function () {
-        // Set Modal image source
         document.getElementById("modalImage").src = this.src;
-
-        // show modal
         let modal = new bootstrap.Modal(document.getElementById("imgModal"));
         modal.show();
-    })
-})
+    });
+});
 
 
 
+// ---------------------------------------------------------------------------
+// Quick-link active state: when a gallery section scrolls into view, highlight its link in the nav
+// ---------------------------------------------------------------------------
 const sections = document.querySelectorAll(".ImgSection");
 const navLinks = document.querySelectorAll(".quick-link");
 
@@ -31,13 +38,15 @@ const observer = new IntersectionObserver(entries => {
         }
     });
 }, {
-    threshold: 0.6
+    threshold: 0.6  // Section is "in view" when 60% visible
 });
 
 sections.forEach(section => observer.observe(section));
 
 
-// Scroll Animation Observer
+// ---------------------------------------------------------------------------
+// Scroll animation: add class .show to .scroll-animate elements when they enter the viewport
+// ---------------------------------------------------------------------------
 const animatedElements = document.querySelectorAll(".scroll-animate");
 
 const scrollObserver = new IntersectionObserver((entries) => {
@@ -47,7 +56,7 @@ const scrollObserver = new IntersectionObserver((entries) => {
         }
     });
 }, {
-    threshold: 0.2
+    threshold: 0.2  // Trigger when 20% of element is visible
 });
 
 animatedElements.forEach(el => scrollObserver.observe(el));
